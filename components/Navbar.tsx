@@ -50,9 +50,9 @@ export default function Navbar() {
         </button>
 
         {/* Logo/title */}
-        <a href="/" style={{ fontWeight: 800, fontSize: 28, color: '#111', textDecoration: 'none' }}>
-          DuneBroom
-        </a>
+<a href="/" className="navbar-logo" style={{ fontWeight: 800, fontSize: 28, color: '#111', textDecoration: 'none' }}>
+  DuneBroom
+</a>
 
         {/* Main nav links - hidden on mobile */}
         <ul
@@ -135,6 +135,22 @@ export default function Navbar() {
 
       {/* CSS for responsive behavior */}
       <style>{`
+        @media (max-width: 900px) {
+         .navbar-logo {
+      position: absolute;
+      left: 0;
+      right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: fit-content;
+  }
+  .navbar-hamburger {
+    position: relative;
+    z-index: 2;
+  }
+}
+
         @media (max-width: 900px) {
           .navbar-links {
             display: none !important;
