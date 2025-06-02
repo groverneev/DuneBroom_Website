@@ -3,7 +3,7 @@ export default function ActionVideo() {
     <section style={{
       maxWidth: 760, margin: '2rem auto', textAlign: 'center'
     }}>
-      <h2 style={{ fontSize: 28, fontWeight: 600, marginBottom: 12 }}>See DuneBroom in Action</h2>
+      <h2 style={{ fontSize: 28, fontWeight: 600, marginBottom: 12, color: "black" }}>See DuneBroom in Action</h2>
       <div style={{
         width: '100%',
         aspectRatio: '16/9',
