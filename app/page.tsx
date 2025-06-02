@@ -130,7 +130,6 @@ export default function Home() {
       </section>
 
       {/* CONTACT PREVIEW */}
-// Add at the bottom of your homepage, after other sections:
 
 <section id="contact" style={{
   background: '#fff',
