@@ -9,7 +9,7 @@ export default function ContactPage() {
       <h1 style={{ marginBottom: 16 }}>Contact Us</h1>
       <p>
         Interested in DuneBroom? Have a question, want to collaborate, or just want to say hi?  
-        Fill out the form below or email us directly.
+        Here are some ways you can contact us:
       </p>
       <div style={{
         margin: "2rem 0",
@@ -20,12 +20,14 @@ export default function ContactPage() {
       }}>
         {/* Replace with your email */}
         <strong>Email:</strong> <a href="mailto:groverneev@gmail.com" style={{ color: "#000000" }}>groverneev@gmail.com</a>
+        <strong>X:</strong> <a style={{ color: "#000000" }}>Coming soon!</a>
+
         <br /><br />
         {/* Optional: Embed a Google Form or Typeform */}
         {/* <iframe src="YOUR_FORM_LINK_HERE" width="100%" height="400" frameBorder="0" style={{border:0}} allowFullScreen></iframe> */}
       </div>
       <p>
-        You can also reach out to us on social media or through our project pages.
+        ...
       </p>
     </main>
   );
