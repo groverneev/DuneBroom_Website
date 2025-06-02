@@ -130,27 +130,91 @@ export default function Home() {
       </section>
 
       {/* CONTACT PREVIEW */}
-      <section id="contact" style={{
-        background: '#fff',
-        color: '#111',
-        padding: '5rem 2rem 6rem 2rem',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center'
-      }}>
-        <h2 style={{ fontSize: 34, fontWeight: 700, marginBottom: 16 }}>Contact & Get Involved</h2>
-        <p style={{ fontSize: 20, maxWidth: 650, textAlign: 'center' }}>
-          Have a question? Want to collaborate, sponsor, or volunteer? Let’s connect!
-        </p>
-        <a href="/contact" style={{
-          marginTop: 24,
-          color: '#16a34a',
-          fontWeight: 600,
-          textDecoration: 'underline'
-        }}>
-          Get in Touch &rarr;
-        </a>
-      </section>
+// Add at the bottom of your homepage, after other sections:
+
+<section id="contact" style={{
+  background: '#fff',
+  color: '#111',
+  padding: '5rem 2rem 6rem 2rem',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center'
+}}>
+  <h2 style={{
+    fontWeight: 700,
+    fontSize: 36,
+    marginBottom: 8,
+    color: '#18181b',
+    letterSpacing: '-0.03em'
+  }}>Contact Us</h2>
+  <p style={{
+    color: '#52525b',
+    fontSize: 18,
+    marginBottom: 32,
+    textAlign: 'center'
+  }}>
+    Drop us a line, ask a question, or just say hello!
+  </p>
+  <div style={{
+    display: 'flex',
+    gap: 16,
+    justifyContent: 'center',
+    marginBottom: 32
+  }}>
+    <a
+      href="https://github.com/groverneev"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        background: '#18181b',
+        color: '#fff',
+        borderRadius: 8,
+        padding: '10px 24px',
+        fontWeight: 600,
+        textDecoration: 'none'
+      }}
+    >
+      GitHub
+    </a>
+    <a
+      href="https://x.com/lightningpro535"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        background: '#14b8a6',
+        color: '#fff',
+        borderRadius: 8,
+        padding: '10px 24px',
+        fontWeight: 600,
+        textDecoration: 'none'
+      }}
+    >
+      X (Twitter)
+    </a>
+  </div>
+  {/* Embedded Google Form */}
+  <div style={{
+    background: '#fff',
+    borderRadius: 16,
+    boxShadow: '0 4px 24px rgba(0,0,0,0.06)',
+    padding: 24,
+    minHeight: 420,
+    margin: '0 auto',
+    width: '100%',
+    maxWidth: 520
+  }}>
+    <iframe
+      src="https://docs.google.com/forms/d/e/1FAIpQLSc2Mu-JSmoX_qaa0uosqCasG70Cu_TV9zOaYJND9c8svt6qgQ/viewform?embedded=true"
+      width="100%"
+      height="420"
+      frameBorder="0"
+      marginHeight={0}
+      marginWidth={0}
+      style={{ border: 'none' }}
+      title="Contact Form"
+    />
+  </div>
+</section>
     </main>
   );
 }
