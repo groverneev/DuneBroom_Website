@@ -6,7 +6,7 @@ export default function Navbar() {
       width: "100%",
       padding: "0.75rem 2rem",
       background: "#bbf7d0",
-      borderBottom: "2px solid #059669",
+      borderBottom: "2px solidrgb(0, 0, 0)",
       display: "flex",
       alignItems: "center",
       justifyContent: "space-between",
