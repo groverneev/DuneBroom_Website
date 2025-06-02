@@ -6,7 +6,7 @@ const navLinks = [
   { href: '/challenge', label: 'Challenge' },
   { href: '/podcast', label: 'Podcast' },
   { href: '/outreach', label: 'Outreach' },
-  { href: '#contact', label: 'Contact' },
+  { href: 'dunebroom.com/#contact', label: 'Contact' },
 ];
 
 export default function Navbar() {
