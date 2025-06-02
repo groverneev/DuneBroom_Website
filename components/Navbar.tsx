@@ -1,16 +1,20 @@
 'use client';
 import { useState } from 'react';
+import { useRouter, usePathname } from 'next/navigation';
+
 
 const navLinks = [
   { href: '/about', label: 'About' },
   { href: '/challenge', label: 'Challenge' },
   { href: '/podcast', label: 'Podcast' },
   { href: '/outreach', label: 'Outreach' },
-  { href: 'dunebroom.com/#contact', label: 'Contact' },
+  { href: '/#contact', label: 'Contact' }, 
 ];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
 
   return (
     <nav style={{
