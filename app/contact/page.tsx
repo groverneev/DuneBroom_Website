@@ -21,7 +21,7 @@ export default function ContactPage() {
       }}>
         <div style={{ marginBottom: "1rem" }}>
           <strong style={{ color: "#111" }}>Email:</strong><br />
-          <a href="mailto:groverneev@gmail.com" style={{ color: "#166534", fontWeight: 500 }}>groverneev@gmail.com</a>
+          <a style={{ color: "#166534", fontWeight: 500 }}>groverneev AT gmail.com</a>
         </div>
         <div style={{ marginBottom: "1rem" }}>
           <strong style={{ color: "#111" }}>GitHub:</strong><br />
