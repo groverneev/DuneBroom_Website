@@ -32,7 +32,7 @@ export default function Navbar() {
         <Link href="/podcast">Podcast</Link>
         <Link href="/outreach">Outreach</Link>
         <Link href="/challenge">Challenge</Link>
-        <Link href="/data">Open Data</Link>
+        <Link href="/call_to_action">Call to Action</Link>
         <Link href="/policy">Policy</Link>
         <Link href="/faq">FAQ</Link>
         <Link href="/contact">Contact</Link>
