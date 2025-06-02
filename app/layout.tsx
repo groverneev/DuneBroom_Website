@@ -1,11 +1,11 @@
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
-import './globals.css'
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import './globals.css';
 
 export const metadata = {
   title: 'DuneBroom | Sweep Clean, Think Smart',
   description: 'Robotics, youth innovation, and clean oceans.',
-}
+};
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -16,5 +16,5 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
       </body>
     </html>
-  )
+  );
 }
