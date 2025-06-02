@@ -84,32 +84,6 @@ export default function AboutPage() {
           </p>
         </div>
       </section>
-      {/* Call to action */}
-      <section style={{
-        maxWidth: 520,
-        margin: '3.5rem auto 0 auto',
-        background: '#111',
-        color: '#fff',
-        borderRadius: 16,
-        padding: '2rem 2rem 1.5rem 2rem',
-        boxShadow: '0 2px 14px rgba(0,0,0,0.07)',
-        textAlign: 'center'
-      }}>
-        <div style={{ fontSize: 20, fontWeight: 600, marginBottom: 10 }}>Want to get involved?</div>
-        <a href="/contact"
-          style={{
-            display: 'inline-block',
-            background: '#13c285',
-            color: '#fff',
-            fontWeight: 700,
-            borderRadius: 8,
-            padding: '14px 38px',
-            fontSize: 18,
-            textDecoration: 'none',
-            transition: 'background 0.2s'
-          }}
-        >Contact Us Here!</a>
-      </section>
     </main>
   );
 }
