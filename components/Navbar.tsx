@@ -19,31 +19,42 @@ export default function Navbar() {
       position: 'sticky',
       top: 0,
       zIndex: 50,
+      width: '100%',
     }}>
-      <div style={{
-        maxWidth: 1200,
-        margin: '0 auto',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        padding: '1rem 2rem'
-      }}>
-        <a href="/" style={{ fontWeight: 800, fontSize: 28, color: '#111', textDecoration: 'none' }}>DuneBroom</a>
-        {/* Hamburger for small screens */}
+      <div
+        style={{
+          maxWidth: 1200,
+          margin: '0 auto',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          padding: '1rem 2rem',
+          position: 'relative'
+        }}
+      >
+        {/* Hamburger left (visible only on mobile) */}
         <button
           onClick={() => setOpen(!open)}
           style={{
-            display: 'none',
             background: 'none',
             border: 'none',
             fontSize: 28,
-            cursor: 'pointer'
+            cursor: 'pointer',
+            marginRight: 16,
+            display: 'none',
           }}
           className="navbar-hamburger"
-          aria-label="Toggle navigation"
+          aria-label="Open menu"
         >
           ☰
         </button>
+
+        {/* Logo/title */}
+        <a href="/" style={{ fontWeight: 800, fontSize: 28, color: '#111', textDecoration: 'none' }}>
+          DuneBroom
+        </a>
+
+        {/* Main nav links - hidden on mobile */}
         <ul
           style={{
             listStyle: 'none',
@@ -73,69 +84,87 @@ export default function Navbar() {
           ))}
         </ul>
       </div>
+
+      {/* Sidebar drawer on mobile */}
+      {open && (
+        <div className="navbar-drawer" onClick={() => setOpen(false)}>
+          <div className="navbar-drawer-content" onClick={e => e.stopPropagation()}>
+            <button
+              onClick={() => setOpen(false)}
+              style={{
+                background: 'none',
+                border: 'none',
+                fontSize: 28,
+                cursor: 'pointer',
+                marginBottom: 24,
+                alignSelf: 'flex-end'
+              }}
+              aria-label="Close menu"
+            >
+              ×
+            </button>
+            <ul style={{
+              listStyle: 'none',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 28,
+              padding: 0,
+              margin: 0,
+              alignItems: 'flex-start'
+            }}>
+              {navLinks.map(link => (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    style={{
+                      color: '#111',
+                      textDecoration: 'none',
+                      fontWeight: 500,
+                      fontSize: 22
+                    }}
+                    onClick={() => setOpen(false)}
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      )}
+
+      {/* CSS for responsive behavior */}
       <style>{`
         @media (max-width: 900px) {
           .navbar-links {
-            display: none;
+            display: none !important;
           }
           .navbar-hamburger {
             display: block !important;
           }
         }
-        @media (max-width: 900px) {
-          nav.open .navbar-links {
-            display: flex !important;
-            flex-direction: column;
-            gap: 20px;
-            position: absolute;
-            top: 70px;
-            left: 0;
-            width: 100%;
-            background: #fff;
-            border-top: 1px solid #e5e7eb;
-            padding: 1.5rem 0;
-            z-index: 99;
-          }
+        .navbar-drawer {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          background: rgba(0,0,0,0.33);
+          z-index: 1000;
+          display: flex;
+          align-items: flex-start;
+        }
+        .navbar-drawer-content {
+          background: #fff;
+          width: 85vw;
+          max-width: 320px;
+          min-height: 100vh;
+          box-shadow: 2px 0 16px rgba(0,0,0,0.1);
+          display: flex;
+          flex-direction: column;
+          padding: 2.2rem 2rem 1.2rem 1.3rem;
         }
       `}</style>
-      {/* Small screen menu */}
-      {open && (
-        <ul
-          className="navbar-links"
-          style={{
-            listStyle: 'none',
-            display: 'flex',
-            flexDirection: 'column',
-            gap: 20,
-            position: 'absolute',
-            top: 70,
-            left: 0,
-            width: '100%',
-            background: '#fff',
-            borderTop: '1px solid #e5e7eb',
-            padding: '1.5rem 0',
-            margin: 0,
-            zIndex: 99
-          }}
-        >
-          {navLinks.map(link => (
-            <li key={link.href}>
-              <a
-                href={link.href}
-                style={{
-                  color: '#111',
-                  textDecoration: 'none',
-                  fontWeight: 500,
-                  fontSize: 18
-                }}
-                onClick={() => setOpen(false)}
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-      )}
     </nav>
   );
 }
