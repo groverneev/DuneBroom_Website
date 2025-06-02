@@ -59,7 +59,7 @@ export default function AboutPage() {
         borderRadius: 12,
         textAlign: "center"
       }}>
-        <strong>Want to learn more or get involved?</strong>
+        <strong> color: "#000000", Want to learn more or get involved?</strong> {/* this was changed */}
         <br />
         <a href="/contact" style={{
           color: "#000000",
