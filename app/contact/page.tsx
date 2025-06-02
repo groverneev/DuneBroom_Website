@@ -1,52 +1,46 @@
-// app/contact/page.tsx
-
 export default function ContactPage() {
   return (
     <main style={{
       minHeight: '80vh',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      background: '#fff',
-      padding: 0,
-      margin: 0,
-      fontFamily: 'Inter, Arial, Helvetica, sans-serif'
+      padding: '4rem 0 2rem 0',
+      background: '#fafafa'
     }}>
-      <section style={{
-        marginTop: '5rem',
-        background: '#f7f7f7',
-        borderRadius: 24,
-        boxShadow: '0 6px 32px rgba(20,20,25,0.06)',
-        padding: '3rem 2rem 2rem 2rem',
-        width: '100%',
-        maxWidth: 540,
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center'
+      <div style={{
+        maxWidth: 640,
+        margin: '0 auto',
+        textAlign: 'center'
       }}>
         <h1 style={{
-          fontSize: 34,
-          fontWeight: 800,
-          letterSpacing: '-0.01em',
-          color: '#0e0e0e',
-          marginBottom: 22
-        }}>Contact</h1>
-        
-        {/* --- Contact Links --- */}
-        <div style={{ display: 'flex', gap: 30, marginBottom: 30 }}>
+          fontWeight: 700,
+          fontSize: 36,
+          marginBottom: 8,
+          color: '#18181b',
+          letterSpacing: '-0.03em'
+        }}>Contact Us</h1>
+        <p style={{
+          color: '#52525b',
+          fontSize: 18,
+          marginBottom: 32
+        }}>
+          Drop us a line, ask a question, or just say hello!
+        </p>
+        <div style={{
+          display: 'flex',
+          gap: 16,
+          justifyContent: 'center',
+          marginBottom: 32
+        }}>
           <a
             href="https://github.com/groverneev"
             target="_blank"
             rel="noopener noreferrer"
             style={{
-              background: '#111',
+              background: '#18181b',
               color: '#fff',
-              fontWeight: 600,
-              padding: '12px 24px',
               borderRadius: 8,
-              textDecoration: 'none',
-              fontSize: 18,
-              transition: 'background 0.2s'
+              padding: '10px 24px',
+              fontWeight: 600,
+              textDecoration: 'none'
             }}
           >
             GitHub
@@ -56,41 +50,41 @@ export default function ContactPage() {
             target="_blank"
             rel="noopener noreferrer"
             style={{
-              background: '#13c285',
+              background: '#14b8a6',
               color: '#fff',
-              fontWeight: 600,
-              padding: '12px 24px',
               borderRadius: 8,
-              textDecoration: 'none',
-              fontSize: 18,
-              transition: 'background 0.2s'
+              padding: '10px 24px',
+              fontWeight: 600,
+              textDecoration: 'none'
             }}
           >
             X (Twitter)
           </a>
         </div>
-
-        {/* --- Google Form Embed --- */}
-        <div style={{ width: '100%' }}>
+        {/* Embedded Google Form */}
+        <div style={{
+          background: '#fff',
+          borderRadius: 16,
+          boxShadow: '0 4px 24px rgba(0,0,0,0.06)',
+          padding: 24,
+          minHeight: 420,
+          margin: '0 auto',
+        }}>
           <iframe
             src="https://docs.google.com/forms/d/e/1FAIpQLSc2Mu-JSmoX_qaa0uosqCasG70Cu_TV9zOaYJND9c8svt6qgQ/viewform?embedded=true"
             width="100%"
-            height="560"
+            height="420"
             frameBorder="0"
-            style={{
-              border: "none",
-              borderRadius: 10,
-              background: "#fff",
-              minHeight: 380,
-              marginTop: 10
-            }}
-            allowFullScreen
+            marginHeight={0}
+            marginWidth={0}
+            style={{ border: 'none' }}
             title="Contact Form"
-          >
-            Loading…
-          </iframe>
+          />
         </div>
-      </section>
+      </div>
     </main>
   );
 }
+
+
+
