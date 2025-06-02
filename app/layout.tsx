@@ -10,9 +10,11 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>
+      <body style={{ margin: 0, padding: 0, minHeight: '100vh', boxSizing: 'border-box' }}>
         <Navbar />
-        <div style={{ minHeight: '80vh' }}>{children}</div>
+        <main style={{ minHeight: '80vh' }}>
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
