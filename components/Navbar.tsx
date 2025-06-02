@@ -16,7 +16,7 @@ export default function Navbar() {
     }}>
       {/* Logo/Brand */}
       <Link href="/" style={{
-        fontWeight: 700, fontSize: 24, color: "#166534", textDecoration: "none"
+        fontWeight: 700, fontSize: 24, color: "#000000", textDecoration: "none"
       }}>
         DuneBroom
       </Link>
