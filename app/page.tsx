@@ -2,9 +2,12 @@
 
 export default function Home() {
   return (
-    <main style={{ background: '#fff', minHeight: '100vh', fontFamily: 'Inter, sans-serif' }}>
-      {/* Hero Section */}
-      <section style={{
+    <main style={{
+      background: '#f5f6fa',
+      fontFamily: 'Inter, sans-serif'
+    }}>
+      {/* HERO SECTION */}
+      <section id="hero" style={{
         minHeight: '85vh',
         display: 'flex',
         flexDirection: 'column',
@@ -20,7 +23,7 @@ export default function Home() {
         <p style={{ fontSize: 22, maxWidth: 600, margin: '0 auto 2rem auto' }}>
           Robotics, youth innovation, and clean oceans.
         </p>
-        <a href="/challenge" style={{
+        <a href="#challenge" style={{
           background: '#fff',
           color: '#0e0e0e',
           fontWeight: 700,
@@ -34,8 +37,8 @@ export default function Home() {
         </a>
       </section>
 
-      {/* Section 2 */}
-      <section style={{
+      {/* ABOUT PREVIEW */}
+      <section id="about" style={{
         background: '#fff',
         color: '#111',
         padding: '5rem 2rem',
@@ -43,16 +46,110 @@ export default function Home() {
         flexDirection: 'column',
         alignItems: 'center'
       }}>
-        <h2 style={{ fontSize: 38, fontWeight: 700, marginBottom: 16 }}>What We Do</h2>
+        <h2 style={{ fontSize: 34, fontWeight: 700, marginBottom: 16 }}>About DuneBroom</h2>
         <p style={{ fontSize: 20, maxWidth: 650, textAlign: 'center' }}>
-          We build autonomous robots powered by edge AI to clean beaches and collect environmental data.
-          Join our youth-powered movement for clean coasts and a smarter future.
+          DuneBroom is a student-led robotics project tackling beach pollution with autonomous robots and edge AI. Led by youth, powered by community.
         </p>
-        {/* Optional: Replace with real images */}
-        <div style={{ marginTop: 48, display: 'flex', gap: '2rem' }}>
-          <div style={{ width: 260, height: 170, background: '#ddd', borderRadius: 18 }} />
-          <div style={{ width: 260, height: 170, background: '#bbb', borderRadius: 18 }} />
-        </div>
+        <a href="/about" style={{
+          marginTop: 24,
+          color: '#0e0e0e',
+          fontWeight: 600,
+          textDecoration: 'underline'
+        }}>
+          Learn more about us &rarr;
+        </a>
+      </section>
+
+      {/* CHALLENGE PREVIEW */}
+      <section id="challenge" style={{
+        background: '#eafcf6',
+        color: '#111',
+        padding: '5rem 2rem',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center'
+      }}>
+        <h2 style={{ fontSize: 34, fontWeight: 700, marginBottom: 16 }}>#BuildTheBroom Challenge</h2>
+        <p style={{ fontSize: 20, maxWidth: 650, textAlign: 'center' }}>
+          Compete with other students to build, program, or test new ideas for the DuneBroom robot. Show off your engineering, win prizes, and join a global mission!
+        </p>
+        <a href="/challenge" style={{
+          marginTop: 24,
+          color: '#166534',
+          fontWeight: 600,
+          textDecoration: 'underline'
+        }}>
+          View the Challenge Details &rarr;
+        </a>
+      </section>
+
+      {/* PODCAST PREVIEW */}
+      <section id="podcast" style={{
+        background: '#fff',
+        color: '#111',
+        padding: '5rem 2rem',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center'
+      }}>
+        <h2 style={{ fontSize: 34, fontWeight: 700, marginBottom: 16 }}>Podcast: Ocean Stewards</h2>
+        <p style={{ fontSize: 20, maxWidth: 650, textAlign: 'center' }}>
+          Listen to interviews with engineers, youth leaders, and experts working to save our coasts.
+        </p>
+        <a href="/podcast" style={{
+          marginTop: 24,
+          color: '#0e0e0e',
+          fontWeight: 600,
+          textDecoration: 'underline'
+        }}>
+          Listen to Episodes &rarr;
+        </a>
+      </section>
+
+      {/* OUTREACH PREVIEW */}
+      <section id="outreach" style={{
+        background: '#f3f7fd',
+        color: '#111',
+        padding: '5rem 2rem',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center'
+      }}>
+        <h2 style={{ fontSize: 34, fontWeight: 700, marginBottom: 16 }}>Outreach & Resources</h2>
+        <p style={{ fontSize: 20, maxWidth: 650, textAlign: 'center' }}>
+          Access lesson plans, advocacy toolkits, and opportunities for teachers and students to join DuneBroom’s movement.
+        </p>
+        <a href="/outreach" style={{
+          marginTop: 24,
+          color: '#1e40af',
+          fontWeight: 600,
+          textDecoration: 'underline'
+        }}>
+          See all resources &rarr;
+        </a>
+      </section>
+
+      {/* CONTACT PREVIEW */}
+      <section id="contact" style={{
+        background: '#fff',
+        color: '#111',
+        padding: '5rem 2rem 6rem 2rem',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center'
+      }}>
+        <h2 style={{ fontSize: 34, fontWeight: 700, marginBottom: 16 }}>Contact & Get Involved</h2>
+        <p style={{ fontSize: 20, maxWidth: 650, textAlign: 'center' }}>
+          Have a question? Want to collaborate, sponsor, or volunteer? Let’s connect!
+        </p>
+        <a href="/contact" style={{
+          marginTop: 24,
+          color: '#16a34a',
+          fontWeight: 600,
+          textDecoration: 'underline'
+        }}>
+          Get in Touch &rarr;
+        </a>
       </section>
     </main>
   );
