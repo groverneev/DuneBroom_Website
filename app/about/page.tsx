@@ -17,15 +17,20 @@ export default function AboutPage() {
         @media (max-width: 700px) {
           .about-section {
             flex-direction: column !important;
-            gap: 1.5rem !important;
+            align-items: center !important;
+            gap: 1.2rem !important;
             text-align: center !important;
             padding: 2rem 0.5rem !important;
           }
+          .about-text {
+            max-width: 98vw !important;
+            width: 100% !important;
+            margin: 0 auto !important;
+            text-align: center !important;
+            font-size: 17px !important;
+          }
           .about-section img {
             margin: 0 auto !important;
-          }
-          .about-section > div:not(:first-child) {
-            align-items: center;
           }
         }
       `}</style>
@@ -64,7 +69,14 @@ export default function AboutPage() {
           />
         </div>
         {/* --- Main About Text --- */}
-        <div>
+        <div
+          className="about-text"
+          style={{
+            maxWidth: 420,
+            width: '100%',
+            margin: '0 auto'
+          }}
+        >
           <h1 style={{
             fontSize: 36,
             fontWeight: 800,
