@@ -4,21 +4,21 @@ export default function ActionVideo() {
       maxWidth: 760, margin: '2rem auto', textAlign: 'center'
     }}>
       <h2 style={{ fontSize: 28, fontWeight: 600, marginBottom: 12 }}>See DuneBroom in Action</h2>
-      {/* Replace src with your YouTube or video URL */}
       <div style={{
-        width: '100%', aspectRatio: '16/9', background: '#e5e7eb', borderRadius: 16,
-        display: 'flex', alignItems: 'center', justifyContent: 'center'
+        width: '100%',
+        aspectRatio: '16/9',
+        background: '#e5e7eb',
+        borderRadius: 16,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
       }}>
-        <iframe
-          width="100%"
-          height="100%"
-          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-          title="DuneBroom in Action"
-          frameBorder="0"
-          allow="autoplay; encrypted-media"
-          allowFullScreen
-        />
+        {/* Embed a 1-second “Coming Soon” video from samplelib */}
+        <video width="100%" height="100%" controls poster="https://dummyimage.com/1280x720/bae6fd/166534&text=Coming+Soon">
+          <source src="https://samplelib.com/mp4/sample-1s.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
     </section>
-  )
+  );
 }
