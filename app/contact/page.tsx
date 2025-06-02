@@ -16,14 +16,18 @@ export default function ContactPage() {
         padding: "2rem",
         background: "#bbf7d0",
         borderRadius: 10,
-        boxShadow: "0 2px 12px rgba(16,102,52,0.06)"
+        boxShadow: "0 2px 12px rgba(16,102,52,0.06)",
+        color: "#111" // sets all text to dark
       }}>
-        {/* Replace with your email */}
-        <strong>Email:</strong> <a href="mailto:groverneev@gmail.com" style={{ color: "#000000" }}>groverneev@gmail.com</a>
-        <strong>X:</strong> <a style={{ color: "#000000" }}>Coming soon!</a>
-
-        <br /><br />
-        {/* Optional: Embed a Google Form or Typeform */}
+        <div style={{ marginBottom: "1rem" }}>
+          <strong style={{ color: "#111" }}>Email:</strong><br />
+          <a href="mailto:groverneev@gmail.com" style={{ color: "#166534", fontWeight: 500 }}>groverneev@gmail.com</a>
+        </div>
+        <div>
+          <strong style={{ color: "#111" }}>X:</strong><br />
+          <span style={{ color: "#666", fontWeight: 500 }}>Coming soon!</span>
+        </div>
+        {/* Optional: Embed a Google Form or Typeform below */}
         {/* <iframe src="YOUR_FORM_LINK_HERE" width="100%" height="400" frameBorder="0" style={{border:0}} allowFullScreen></iframe> */}
       </div>
       <p>
