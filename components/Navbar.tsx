@@ -1,42 +1,43 @@
-import Link from "next/link";
+// components/Navbar.tsx
 
 export default function Navbar() {
   return (
     <nav style={{
-      width: "100%",
-      padding: "0.75rem 2rem",
-      background: "#bbf7d0",
-      borderBottom: "2px solidrgb(0, 0, 0)",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "space-between",
-      position: "sticky",
+      width: '100%',
+      background: '#fff',
+      borderBottom: '1px solid #eee',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      padding: '1.5rem 3vw',
+      position: 'sticky',
       top: 0,
-      zIndex: 1000,
+      zIndex: 100,
+      fontFamily: 'Inter, sans-serif'
     }}>
-      {/* Logo/Brand */}
-      <Link href="/" style={{
-        fontWeight: 700, fontSize: 24, color: "#000000", textDecoration: "none"
-      }}>
+      <a href="/" style={{ fontSize: 30, fontWeight: 900, color: '#111', letterSpacing: '-0.03em', textDecoration: 'none' }}>
         DuneBroom
-      </Link>
-      {/* Menu Links */}
-      <div style={{
-        color: "#000000",
-        display: "flex",
-        gap: "2rem",
-        fontSize: 16,
-        alignItems: "center"
-      }}>
-        <Link href="/about">About</Link>
-        <Link href="/podcast">Podcast</Link>
-        <Link href="/outreach">Outreach</Link>
-        <Link href="/challenge">Challenge</Link>
-        <Link href="/call_to_action">Call to Action</Link>
-        <Link href="/policy">Policy</Link>
-        <Link href="/faq">FAQ</Link>
-        <Link href="/contact">Contact</Link>
+      </a>
+      <div style={{ display: 'flex', gap: '2rem' }}>
+        <a href="/about" style={navLink}>About</a>
+        <a href="/challenge" style={navLink}>Challenge</a>
+        <a href="/podcast" style={navLink}>Podcast</a>
+        <a href="/outreach" style={navLink}>Outreach</a>
+        <a href="/contact" style={navLink}>Contact</a>
       </div>
     </nav>
   );
 }
+
+const navLink = {
+  fontSize: 17,
+  color: '#222',
+  textDecoration: 'none',
+  fontWeight: 600,
+  letterSpacing: '-0.01em',
+  transition: 'color 0.2s',
+  padding: '4px 8px',
+  borderRadius: 4,
+  // Add hover
+  cursor: 'pointer'
+};
