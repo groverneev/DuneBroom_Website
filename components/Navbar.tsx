@@ -22,6 +22,7 @@ export default function Navbar() {
       </Link>
       {/* Menu Links */}
       <div style={{
+        color: "#000000",
         display: "flex",
         gap: "2rem",
         fontSize: 16,
