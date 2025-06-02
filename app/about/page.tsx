@@ -1,4 +1,3 @@
-// app/about/page.tsx
 import Image from "next/image";
 
 export default function AboutPage() {
@@ -13,20 +12,41 @@ export default function AboutPage() {
       padding: '0',
       margin: '0'
     }}>
-      <section style={{
-        width: '100%',
-        maxWidth: 820,
-        margin: '4rem auto 0 auto',
-        background: '#f7f7f7',
-        borderRadius: 28,
-        padding: '3rem 2rem',
-        boxShadow: '0 6px 32px rgba(20,20,25,0.06)',
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center',
-        gap: '2.5rem'
-      }}>
-        {/* --- Profile Image (replace /profile.jpg with your image in /public) --- */}
+      {/* Responsive style tag */}
+      <style>{`
+        @media (max-width: 700px) {
+          .about-section {
+            flex-direction: column !important;
+            gap: 1.5rem !important;
+            text-align: center !important;
+            padding: 2rem 0.5rem !important;
+          }
+          .about-section img {
+            margin: 0 auto !important;
+          }
+          .about-section > div:not(:first-child) {
+            align-items: center;
+          }
+        }
+      `}</style>
+
+      <section
+        className="about-section"
+        style={{
+          width: '100%',
+          maxWidth: 820,
+          margin: '4rem auto 0 auto',
+          background: '#f7f7f7',
+          borderRadius: 28,
+          padding: '3rem 2rem',
+          boxShadow: '0 6px 32px rgba(20,20,25,0.06)',
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'center',
+          gap: '2.5rem'
+        }}
+      >
+        {/* --- Profile Image --- */}
         <div style={{ flex: 'none' }}>
           <Image
             src="/profile.png"
@@ -37,7 +57,9 @@ export default function AboutPage() {
               borderRadius: '50%',
               border: '4px solid #111',
               boxShadow: '0 4px 18px rgba(0,0,0,0.09)',
-              background: '#eee'
+              background: '#eee',
+              display: 'block',
+              margin: 0
             }}
           />
         </div>
