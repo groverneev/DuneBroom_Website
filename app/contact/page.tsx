@@ -23,12 +23,16 @@ export default function ContactPage() {
           <strong style={{ color: "#111" }}>Email:</strong><br />
           <a href="mailto:groverneev@gmail.com" style={{ color: "#166534", fontWeight: 500 }}>groverneev@gmail.com</a>
         </div>
+        <div style={{ marginBottom: "1rem" }}>
+          <strong style={{ color: "#111" }}>GitHub:</strong><br />
+          <a href="https://github.com/groverneev" target="_blank" rel="noopener noreferrer" style={{ color: "#166534", fontWeight: 500 }}>
+            github.com/groverneev
+          </a>
+        </div>
         <div>
           <strong style={{ color: "#111" }}>X:</strong><br />
           <span style={{ color: "#666", fontWeight: 500 }}>Coming soon!</span>
         </div>
-        {/* Optional: Embed a Google Form or Typeform below */}
-        {/* <iframe src="YOUR_FORM_LINK_HERE" width="100%" height="400" frameBorder="0" style={{border:0}} allowFullScreen></iframe> */}
       </div>
       <p>
         ...

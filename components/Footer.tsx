@@ -10,9 +10,22 @@ export default function Footer() {
     }}>
       &copy; {new Date().getFullYear()} DuneBroom. All rights reserved.
       <br />
-      <a href="mailto:info@dunebroom.com">Contact</a> | 
-      <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"> Twitter</a> | 
-      <a href="https://github.com/groverneev" target="_blank" rel="noopener noreferrer"> GitHub</a>
+      <a 
+        href="/contact" 
+        style={{
+          display: 'inline-block',
+          marginTop: 12,
+          padding: '8px 20px',
+          background: '#bbf7d0',
+          color: '#166534',
+          borderRadius: 8,
+          textDecoration: 'none',
+          fontWeight: 600,
+          transition: 'background 0.2s'
+        }}
+      >
+        Contact
+      </a>
     </footer>
-  )
+  );
 }
