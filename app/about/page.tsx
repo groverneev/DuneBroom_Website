@@ -62,7 +62,7 @@ export default function AboutPage() {
         <strong>Want to learn more or get involved?</strong>
         <br />
         <a href="/contact" style={{
-          color: "#166534",
+          color: "#000000",
           textDecoration: "underline",
           fontWeight: 500
         }}>

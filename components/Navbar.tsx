@@ -36,6 +36,7 @@ export default function Navbar() {
         <Link href="/policy">Policy</Link>
         <Link href="/faq">FAQ</Link>
         <Link href="/contact">Contact</Link>
+        <Link href="/contact">Contact</Link>
       </div>
     </nav>
   );

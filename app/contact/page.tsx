@@ -19,7 +19,7 @@ export default function ContactPage() {
         boxShadow: "0 2px 12px rgba(16,102,52,0.06)"
       }}>
         {/* Replace with your email */}
-        <strong>Email:</strong> <a href="mailto:groverneev01@gmail.com" style={{ color: "#166534" }}>groverneev01@gmail.com</a>
+        <strong>Email:</strong> <a href="mailto:groverneev@gmail.com" style={{ color: "#000000" }}>groverneev@gmail.com</a>
         <br /><br />
         {/* Optional: Embed a Google Form or Typeform */}
         {/* <iframe src="YOUR_FORM_LINK_HERE" width="100%" height="400" frameBorder="0" style={{border:0}} allowFullScreen></iframe> */}
