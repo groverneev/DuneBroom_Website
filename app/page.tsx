@@ -216,7 +216,7 @@ export default function Home() {
         textDecoration: 'none'
       }}
     >
-      X (Twitter)
+      X
     </a>
   </div>
   {/* Embedded Google Form */}
