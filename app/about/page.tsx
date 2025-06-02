@@ -20,7 +20,7 @@ export default function AboutPage() {
             align-items: center !important;
             gap: 1.2rem !important;
             text-align: center !important;
-            padding: 2rem 0.5rem !important;
+            padding: 2rem 5vw !important;
           }
           .about-text {
             max-width: 98vw !important;
