@@ -1,78 +1,114 @@
+// app/about/page.tsx
 import Image from "next/image";
 
 export default function AboutPage() {
   return (
-    <main style={{ background: '#f8fafc', minHeight: "100vh", paddingTop: "2rem", paddingBottom: "2rem" }}>
-      <section style={{ 
-        maxWidth: 720, 
-        margin: '2rem auto', 
-        background: '#fff', 
-        borderRadius: 16, 
-        boxShadow: '0 4px 24px rgba(37,99,235,0.06)', 
-        padding: '2.5rem 2rem'
+    <main style={{
+      minHeight: '80vh',
+      background: '#fff',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      fontFamily: 'Inter, Arial, Helvetica, sans-serif',
+      padding: '0',
+      margin: '0'
+    }}>
+      <section style={{
+        width: '100%',
+        maxWidth: 820,
+        margin: '4rem auto 0 auto',
+        background: '#f7f7f7',
+        borderRadius: 28,
+        padding: '3rem 2rem',
+        boxShadow: '0 6px 32px rgba(20,20,25,0.06)',
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: '2.5rem'
       }}>
-        <div style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: '2rem',
-          marginBottom: '2rem',
-          flexWrap: 'wrap'
-        }}>
+        {/* --- Profile Image (replace /profile.jpg with your image in /public) --- */}
+        <div style={{ flex: 'none' }}>
           <Image
             src="/profile.jpg"
             alt="Neev Grover, founder of DuneBroom"
-            width={128}
-            height={128}
+            width={140}
+            height={140}
             style={{
               borderRadius: '50%',
-              border: '4px solid #4ade80',
-              boxShadow: '0 4px 24px rgba(16,185,129,0.09)'
+              border: '4px solid #111',
+              boxShadow: '0 4px 18px rgba(0,0,0,0.09)',
+              background: '#eee'
             }}
           />
-          <div>
-            <h1 style={{ marginBottom: 6, color: "#2563eb", fontSize: 32 }}>About DuneBroom</h1>
-            <h2 style={{
-              fontWeight: 500,
-              fontSize: 18,
-              color: '#4ade80',
-              margin: 0,
-              marginBottom: 10
-            }}>
-              Neev Grover • Founder & Student Engineer
-            </h2>
-          </div>
         </div>
-        <section style={{ color: "#64748b", lineHeight: 1.65 }}>
-          <p>
+        {/* --- Main About Text --- */}
+        <div>
+          <h1 style={{
+            fontSize: 36,
+            fontWeight: 800,
+            letterSpacing: '-0.01em',
+            marginBottom: 8,
+            color: '#0e0e0e'
+          }}>About <span style={{ color: '#2563eb' }}>DuneBroom</span></h1>
+          <h2 style={{
+            fontSize: 20,
+            fontWeight: 600,
+            color: '#13c285',
+            margin: 0,
+            marginBottom: 20
+          }}>Neev Grover • Founder & Student Engineer</h2>
+          <p style={{
+            fontSize: 18,
+            color: '#222',
+            marginBottom: 8
+          }}>
             <b>DuneBroom</b> is a student-led robotics project dedicated to making a real-world impact for our beaches and our planet.
             Founded by <b>Neev Grover</b>, DuneBroom builds and deploys autonomous robots powered by edge AI to clean beaches and collect environmental data.
           </p>
-          <p>
-            Our team is made up of youth builders, engineers, and environmental advocates who believe in technology as a force for good. From hardware design to software innovation, we’re proving that young people can build solutions to big challenges—starting with plastic pollution.
-          </p>
-          <p>
-            Join us as we bring together robotics, open data, and youth-powered advocacy to sweep clean and think smart!
-          </p>
-        </section>
-        <div style={{
-          marginTop: 32,
-          background: "#e0f2fe",
-          padding: "1.5rem",
-          borderRadius: 12,
-          textAlign: "center",
-          boxShadow: "0 2px 8px rgba(37,99,235,0.06)"
-        }}>
-          <strong style={{ color: "#2563eb", fontSize: 18 }}>Want to learn more or get involved?</strong>
-          <br />
-          <a href="/contact" style={{
-            color: "#4ade80",
-            textDecoration: "underline",
-            fontWeight: 600,
-            fontSize: 16
+          <p style={{
+            fontSize: 18,
+            color: '#222'
           }}>
-            Contact us here!
-          </a>
+            Our team is made up of youth builders, engineers, and environmental advocates who believe in technology as a force for good. From hardware design to software innovation, we’re proving that young people can build solutions to big challenges—starting with plastic pollution.
+            <br />
+            <br />
+            <span style={{
+              background: '#0e0e0e',
+              color: '#fff',
+              padding: '0.1em 0.6em',
+              borderRadius: 6,
+              fontWeight: 700
+            }}>
+              Join us as we sweep clean and think smart!
+            </span>
+          </p>
         </div>
+      </section>
+      {/* Call to action */}
+      <section style={{
+        maxWidth: 520,
+        margin: '3.5rem auto 0 auto',
+        background: '#111',
+        color: '#fff',
+        borderRadius: 16,
+        padding: '2rem 2rem 1.5rem 2rem',
+        boxShadow: '0 2px 14px rgba(0,0,0,0.07)',
+        textAlign: 'center'
+      }}>
+        <div style={{ fontSize: 20, fontWeight: 600, marginBottom: 10 }}>Want to get involved?</div>
+        <a href="/contact"
+          style={{
+            display: 'inline-block',
+            background: '#13c285',
+            color: '#fff',
+            fontWeight: 700,
+            borderRadius: 8,
+            padding: '14px 38px',
+            fontSize: 18,
+            textDecoration: 'none',
+            transition: 'background 0.2s'
+          }}
+        >Contact Us Here!</a>
       </section>
     </main>
   );
