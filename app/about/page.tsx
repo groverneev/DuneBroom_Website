@@ -103,7 +103,7 @@ export default function AboutPage() {
             fontSize: 18,
             color: '#222'
           }}>
-            Our team is made up of youth builders, engineers, and environmental advocates who believe in technology as a force for good. From hardware design to software innovation, we’re proving that young people can build solutions to big challenges—starting with plastic pollution.
+            Our team is made up of youth builders, engineers, and environmental advocates who believe in technology as a force for good. From hardware design to software innovation, we’re proving that young people can build solutions to big challenges!
             <br />
             <br />
             <span style={{
