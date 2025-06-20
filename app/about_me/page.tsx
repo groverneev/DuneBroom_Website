@@ -102,7 +102,7 @@ export default function AboutPage() {
             fontSize: 18,
             color: '#222'
           }}>
-            Neev founded DuneBroom in September 2024 after combining his interests in machine learning, robotics, and environmental impact. What started as a simple project quickly evolved into an autonomous beach-cleaning robot, blending 3D printing, computer vision, and hardware design. Through DuneBroom, Neev aims to apply technology to solve real-world sustainability challenges while continuing to experiment with new engineering ideas.
+            Neev founded DuneBroom in September 2024 after combining his interests in machine learning, robotics, and environmental impact. What started as a simple project quickly evolved into an autonomous beach-cleaning robot, blending 3D printing, computer vision, and hardware design. Through DuneBroom, Neev aims to apply technology to solve real-world sustainability challenges.
             <br />
             <br />
           </p>
