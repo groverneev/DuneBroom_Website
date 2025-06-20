@@ -46,7 +46,7 @@ export default function Home() {
       }}>
         <h2 style={{ fontSize: 34, fontWeight: 700, marginBottom: 16 }}>About DuneBroom</h2>
         <p style={{ fontSize: 20, maxWidth: 650, textAlign: 'center' }}>
-          DuneBroom is a student-led robotics project tackling beach pollution with autonomous robots and edge AI. Led by youth, powered by community.
+          DuneBroom is a student-led robotics project tackling beach pollution with autonomous robots and edge AI.
         </p>
 <a href="/about" style={{
   marginTop: 24,
