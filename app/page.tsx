@@ -164,7 +164,7 @@ export default function Home() {
       target="_blank"
       rel="noopener noreferrer"
       style={{
-        background: '#18181b',
+        background: '#1e40af',
         color: '#fff',
         borderRadius: 8,
         padding: '10px 24px',
@@ -179,7 +179,7 @@ export default function Home() {
       target="_blank"
       rel="noopener noreferrer"
       style={{
-        background: '#14b8a6',
+        background: '#18181b',
         color: '#fff',
         borderRadius: 8,
         padding: '10px 24px',
@@ -195,7 +195,7 @@ export default function Home() {
       target="_blank"
       rel="noopener noreferrer"
       style={{
-        background: '#1e40af',
+        background: '#14b8a6',
         color: '#fff',
         borderRadius: 8,
         padding: '10px 24px',
