@@ -1,7 +1,7 @@
 export default function Page() {
   return (
     <main style={{ maxWidth: 700, margin: '2rem auto', padding: 24 }}>
-      <h1>Challenge</h1>
+      <h1>Mission Statement</h1>
       <p>Coming soon...</p>
     </main>
   )
