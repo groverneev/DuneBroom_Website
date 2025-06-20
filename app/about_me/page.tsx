@@ -83,7 +83,7 @@ export default function AboutPage() {
             letterSpacing: '-0.01em',
             marginBottom: 8,
             color: '#0e0e0e'
-          }}>About <span style={{ color: '#2563eb' }}>DuneBroom</span></h1>
+          }}>About <span style={{ color: '#2563eb' }}>Me</span></h1>
           <h2 style={{
             fontSize: 20,
             fontWeight: 600,
