@@ -1,5 +1,3 @@
-// app/page.tsx
-
 export default function Home() {
   return (
     <main style={{
@@ -21,7 +19,7 @@ export default function Home() {
         <h1 style={{ fontSize: 64, fontWeight: 800, letterSpacing: '-0.03em', margin: 0 }}>DuneBroom</h1>
         <h2 style={{ fontSize: 28, fontWeight: 400, margin: '1.2rem 0' }}>Sweep Clean, Think Smart</h2>
         <p style={{ fontSize: 22, maxWidth: 600, margin: '0 auto 2rem auto' }}>
-          Robotics, youth innovation, and clean oceans.
+          Robotics, Innovation, and Clean Oceans.
         </p>
         <a href="#challenge" style={{
           background: '#fff',
