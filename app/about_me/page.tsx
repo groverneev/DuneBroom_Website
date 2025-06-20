@@ -96,8 +96,7 @@ export default function AboutPage() {
             color: '#222',
             marginBottom: 8
           }}>
-            <b>DuneBroom</b> is a student-led robotics project dedicated to making a real-world impact for our beaches and our planet.
-            Founded by <b>Neev Grover</b>, DuneBroom builds and deploys autonomous robots powered by edge AI to clean beaches and collect environmental data.
+            <b>Neev</b> is a sophomore at The Harker School passionate about Computer Science, Chess, and Music. He enjoys building projects, playing competitive chess, and writing about technology on his blog at techunpacked.substack.com.
           </p>
         </div>
       </section>

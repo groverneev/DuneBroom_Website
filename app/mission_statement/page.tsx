@@ -121,4 +121,3 @@ export default function Page() {
     </main>
   )
 }
-//            Neev is a sophomore at The Harker School passionate about Computer Science, Chess, and Music.
