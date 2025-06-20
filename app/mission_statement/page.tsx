@@ -51,23 +51,6 @@ export default function Page() {
           gap: '2.5rem'
         }}
       >
-        {/* --- Profile Image --- */}
-        <div style={{ flex: 'none' }}>
-          <Image
-            src="/profile.png"
-            alt="Neev Grover, founder of DuneBroom"
-            width={140}
-            height={140}
-            style={{
-              borderRadius: '50%',
-              border: '4px solid #111',
-              boxShadow: '0 4px 18px rgba(0,0,0,0.09)',
-              background: '#eee',
-              display: 'block',
-              margin: 0
-            }}
-          />
-        </div>
         {/* --- Main About Text --- */}
         <div
           className="about-text"
