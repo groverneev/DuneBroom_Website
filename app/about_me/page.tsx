@@ -98,6 +98,16 @@ export default function AboutPage() {
           }}>
               <b>Neev</b> is a sophomore at The Harker School passionate about Computer Science, Chess, and Music. He enjoys building projects, playing competitive chess, and writing about technology on his blog at <a href="https://techunpacked.substack.com" target="_blank" rel="noopener noreferrer">techunpacked.substack.com</a>.
           </p>
+          <p style={{
+            fontSize: 18,
+            color: '#222'
+          }}>
+Neev founded DuneBroom in September 2024 after combining his interests in machine learning, robotics, and environmental impact. What started as a simple project quickly evolved into an autonomous beach-cleaning robot, blending 3D printing, computer vision, and hardware design. Through DuneBroom, Neev aims to apply technology to solve real-world sustainability challenges while continuing to experiment with new engineering ideas.
+
+            <br />
+            <br />
+          </p>
+
         </div>
       </section>
     </main>
