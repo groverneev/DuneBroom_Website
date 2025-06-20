@@ -97,36 +97,6 @@ export default function Home() {
 </a>
       </section>
 
-      {/* PODCAST PREVIEW */}
-      <section id="podcast" style={{
-        background: '#fff',
-        color: '#111',
-        padding: '5rem 2rem',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center'
-      }}>
-        <h2 style={{ fontSize: 34, fontWeight: 700, marginBottom: 16 }}>Podcast: Ocean Stewards</h2>
-        <p style={{ fontSize: 20, maxWidth: 650, textAlign: 'center' }}>
-          Listen to interviews with engineers, youth leaders, and experts working to save our coasts.
-        </p>
-<a href="/podcast" style={{
-  marginTop: 24,
-  display: 'inline-block',
-  background: '#2563eb',
-  color: '#fff',
-  fontWeight: 700,
-  borderRadius: 8,
-  padding: '12px 32px',
-  fontSize: 17,
-  textDecoration: 'none',
-  boxShadow: '0 2px 12px rgba(0,0,0,0.06)',
-  transition: 'background 0.2s, color 0.2s'
-}}>
-  Listen to Episodes &rarr;
-</a>
-      </section>
-
       {/* OUTREACH PREVIEW */}
       <section id="outreach" style={{
         background: '#f3f7fd',
