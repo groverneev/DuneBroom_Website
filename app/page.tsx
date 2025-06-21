@@ -1,3 +1,6 @@
+import ContactSection from '@/components/ContactSection';   // ← make sure the path matches your project
+
+
 export default function Home() {
   return (
     <main style={{
@@ -176,28 +179,11 @@ export default function Home() {
 
 
   </div>
-  {/* Embedded Google Form */}
-  <div style={{
-    background: '#fff',
-    borderRadius: 16,
-    boxShadow: '0 4px 24px rgba(0,0,0,0.06)',
-    padding: 24,
-    minHeight: 420,
-    margin: '0 auto',
-    width: '100%',
-    maxWidth: 520
-  }}>
-    <iframe
-      src="https://docs.google.com/forms/d/e/1FAIpQLSc2Mu-JSmoX_qaa0uosqCasG70Cu_TV9zOaYJND9c8svt6qgQ/viewform?embedded=true"
-      width="100%"
-      height="420"
-      frameBorder="0"
-      marginHeight={0}
-      marginWidth={0}
-      style={{ border: 'none' }}
-      title="Contact Form"
-    />
-  </div>
+
+      {/* ───────── CONTACT SECTION (new) ───────── */}
+      <ContactSection />
+
+
 </section>
     </main>
   );
