@@ -21,7 +21,7 @@ export default function Home() {
         <p style={{ fontSize: 22, maxWidth: 600, margin: '0 auto 2rem auto' }}>
           Robotics, Innovation, and Clean Oceans.
         </p>
-        <a href="#challenge" style={{
+        <a href="/mission_statement" style={{
           background: '#fff',
           color: '#0e0e0e',
           fontWeight: 700,
