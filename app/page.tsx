@@ -37,7 +37,7 @@ export default function Home() {
 
       {/* ABOUT PREVIEW */}
       <section id="about" style={{
-        background: '#fff',
+        background: '#eafcf6',
         color: '#111',
         padding: '5rem 2rem',
         display: 'flex',
@@ -51,7 +51,7 @@ export default function Home() {
 <a href="/about" style={{
   marginTop: 24,
   display: 'inline-block',
-  background: '#0e0e0e',
+  background: '#13c285',
   color: '#fff',
   fontWeight: 700,
   borderRadius: 8,
