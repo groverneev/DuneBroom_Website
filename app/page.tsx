@@ -65,36 +65,6 @@ export default function Home() {
 </a>
       </section>
 
-      {/* CHALLENGE PREVIEW */}
-      <section id="challenge" style={{
-        background: '#eafcf6',
-        color: '#111',
-        padding: '5rem 2rem',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center'
-      }}>
-        <h2 style={{ fontSize: 34, fontWeight: 700, marginBottom: 16 }}>#BuildTheBroom Challenge</h2>
-        <p style={{ fontSize: 20, maxWidth: 650, textAlign: 'center' }}>
-          Compete with other students to build, program, or test new ideas for the DuneBroom robot. Show off your engineering, win prizes, and join a global mission!
-        </p>
-<a href="/challenge" style={{
-  marginTop: 24,
-  display: 'inline-block',
-  background: '#13c285',
-  color: '#fff',
-  fontWeight: 700,
-  borderRadius: 8,
-  padding: '12px 32px',
-  fontSize: 17,
-  textDecoration: 'none',
-  boxShadow: '0 2px 12px rgba(0,0,0,0.06)',
-  transition: 'background 0.2s, color 0.2s'
-}}>
-  View the Challenge Details &rarr;
-</a>
-      </section>
-
       {/* OUTREACH PREVIEW */}
       <section id="outreach" style={{
         background: '#f3f7fd',
