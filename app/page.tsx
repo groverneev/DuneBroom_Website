@@ -31,7 +31,7 @@ export default function Home() {
           textDecoration: 'none',
           boxShadow: '0 4px 16px rgba(0,0,0,0.06)'
         }}>
-          Join the Challenge
+          Mission Statement
         </a>
       </section>
 
