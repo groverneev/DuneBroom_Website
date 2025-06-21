@@ -48,7 +48,7 @@ export default function Home() {
         <p style={{ fontSize: 20, maxWidth: 650, textAlign: 'center' }}>
           DuneBroom is a student-led robotics project tackling beach pollution with autonomous robots and edge AI.
         </p>
-<a href="/about" style={{
+<a href="/about_me" style={{
   marginTop: 24,
   display: 'inline-block',
   background: '#13c285',
@@ -61,7 +61,7 @@ export default function Home() {
   boxShadow: '0 2px 12px rgba(0,0,0,0.06)',
   transition: 'background 0.2s, color 0.2s'
 }}>
-  Learn more about us &rarr;
+  Learn More &rarr;
 </a>
       </section>
 
@@ -74,11 +74,11 @@ export default function Home() {
         flexDirection: 'column',
         alignItems: 'center'
       }}>
-        <h2 style={{ fontSize: 34, fontWeight: 700, marginBottom: 16 }}>Outreach & Resources</h2>
+        <h2 style={{ fontSize: 34, fontWeight: 700, marginBottom: 16 }}>Resources</h2>
         <p style={{ fontSize: 20, maxWidth: 650, textAlign: 'center' }}>
           Access lesson plans, advocacy toolkits, and opportunities for teachers and students to join DuneBroom’s movement.
         </p>
-<a href="/outreach" style={{
+<a href="/resources" style={{
   marginTop: 24,
   display: 'inline-block',
   background: '#1e40af',
