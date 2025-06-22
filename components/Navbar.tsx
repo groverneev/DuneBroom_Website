@@ -8,6 +8,7 @@ const navLinks = [
   { href: '/mission_statement', label: 'Mission Statement' },
   { href: '/resources', label: 'Resources' },
   { href: '/outreach', label: 'Outreach' },
+  { href: '/blog', label: 'Blog' },
   { href: '/#contact', label: 'Contact' }, 
 ];
 
