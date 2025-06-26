@@ -135,7 +135,7 @@ export default function Home() {
       target="_blank"
       rel="noopener noreferrer"
       style={{
-        background: '#1e40af',
+        background: '#2563eb',
         color: '#fff',
         borderRadius: 8,
         padding: '10px 24px',
