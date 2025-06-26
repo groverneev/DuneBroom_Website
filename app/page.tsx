@@ -194,6 +194,21 @@ export default function Home() {
             X
           </a>
 
+          <a
+            href="https://neevgrover.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              background: '#d43226',
+              color: '#fff',
+              borderRadius: 8,
+              padding: '10px 24px',
+              fontWeight: 600,
+              textDecoration: 'none',
+            }}
+          >
+            Website
+          </a>
 
   </div>
 
