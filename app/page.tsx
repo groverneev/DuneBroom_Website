@@ -130,52 +130,69 @@ export default function Home() {
     marginBottom: 32
   }}>
 
-    <a
-      href="https://github.com/groverneev"
-      target="_blank"
-      rel="noopener noreferrer"
-      style={{
-        background: '#2563eb',
-        color: '#fff',
-        borderRadius: 8,
-        padding: '10px 24px',
-        fontWeight: 600,
-        textDecoration: 'none'
-      }}
-    >
-      GitHub
-    </a>
-    <a
-      href="https://x.com/lightningpro535"
-      target="_blank"
-      rel="noopener noreferrer"
-      style={{
-        background: '#18181b',
-        color: '#fff',
-        borderRadius: 8,
-        padding: '10px 24px',
-        fontWeight: 600,
-        textDecoration: 'none'
-      }}
-    >
-      X
-    </a>
+          <a
+            href="https://github.com/groverneev"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              background: '#2563eb',
+              color: '#fff',
+              borderRadius: 8,
+              padding: '10px 24px',
+              fontWeight: 600,
+              textDecoration: 'none',
+            }}
+          >
+            GitHub
+          </a>
 
-    <a
-      href="techunpacked.substack.com"
-      target="_blank"
-      rel="noopener noreferrer"
-      style={{
-        background: '#14b8a6',
-        color: '#fff',
-        borderRadius: 8,
-        padding: '10px 24px',
-        fontWeight: 600,
-        textDecoration: 'none'
-      }}
-    >
-      Substack
-    </a>
+          <a
+            href="https://techunpacked.substack.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              background: '#14b8a6',
+              color: '#fff',
+              borderRadius: 8,
+              padding: '10px 24px',
+              fontWeight: 600,
+              textDecoration: 'none',
+            }}
+          >
+            Blog
+          </a>
+
+          <a
+            href="https://chess.com/member/lightningpro535/stats/rapid?days=0"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              background: '#F39C12',
+              color: '#fff',
+              borderRadius: 8,
+              padding: '10px 24px',
+              fontWeight: 600,
+              textDecoration: 'none',
+            }}
+          >
+            Chess
+          </a>
+
+          <a
+            href="https://x.com/lightningpro535"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              background: '#9B59B6',
+              color: '#fff',
+              borderRadius: 8,
+              padding: '10px 24px',
+              fontWeight: 600,
+              textDecoration: 'none',
+            }}
+          >
+            X
+          </a>
 
 
   </div>
