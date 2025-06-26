@@ -84,7 +84,7 @@ export default function Home() {
 <a href="/resources" style={{
   marginTop: 24,
   display: 'inline-block',
-  background: '#1e40af',
+  background: '#2563eb',
   color: '#fff',
   fontWeight: 700,
   borderRadius: 8,
