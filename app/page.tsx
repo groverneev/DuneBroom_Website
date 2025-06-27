@@ -1,8 +1,19 @@
 import ContactSection from '@/components/ContactSection';   // ← make sure the path matches your project
+import Image from 'next/image';
 
+import Head from 'next/head';
 
 export default function Home() {
   return (
+        <>
+          {/* ───── HEAD goes here ───── */}
+      <Head>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        />
+      </Head>
+
     <main style={{
       background: '#f5f6fa',
       fontFamily: 'Inter, sans-serif'
@@ -123,94 +134,50 @@ export default function Home() {
   }}>
     Drop us a line, ask a question, or just say hello!
   </p>
-  <div style={{
-    display: 'flex',
-    gap: 16,
-    justifyContent: 'center',
-    marginBottom: 32
-  }}>
 
-          <a
-            href="https://github.com/groverneev"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              background: '#2563eb',
-              color: '#fff',
-              borderRadius: 8,
-              padding: '10px 24px',
-              fontWeight: 600,
-              textDecoration: 'none',
-            }}
-          >
-            GitHub
-          </a>
 
-          <a
-            href="https://techunpacked.substack.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              background: '#14b8a6',
-              color: '#fff',
-              borderRadius: 8,
-              padding: '10px 24px',
-              fontWeight: 600,
-              textDecoration: 'none',
-            }}
-          >
-            Blog
-          </a>
 
-          <a
-            href="https://chess.com/member/lightningpro535/stats/rapid?days=0"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              background: '#F39C12',
-              color: '#fff',
-              borderRadius: 8,
-              padding: '10px 24px',
-              fontWeight: 600,
-              textDecoration: 'none',
-            }}
-          >
-            Chess
-          </a>
+<div style={{ display: 'flex', gap: 24, justifyContent: 'center', marginBottom: 32 }}>
+  {/* GitHub */}
+  <a
+    href="https://github.com/groverneev"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{ color: '#fff' }}
+  >
+    <i className="fa-brands fa-github fa-2x" />
+  </a>
 
-          <a
-            href="https://x.com/lightningpro535"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              background: '#9B59B6',
-              color: '#fff',
-              borderRadius: 8,
-              padding: '10px 24px',
-              fontWeight: 600,
-              textDecoration: 'none',
-            }}
-          >
-            X
-          </a>
+  {/* Substack blog – FA doesn’t have a Substack logo, so use a pencil icon */}
+  <a
+    href="https://techunpacked.substack.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{ color: '#fff' }}
+  >
+    <i className="fa-solid fa-pen-nib fa-2x" />
+  </a>
 
-          <a
-            href="https://neevgrover.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              background: '#d43226',
-              color: '#fff',
-              borderRadius: 8,
-              padding: '10px 24px',
-              fontWeight: 600,
-              textDecoration: 'none',
-            }}
-          >
-            Website
-          </a>
+  {/* Chess.com profile */}
+  <a
+    href="https://chess.com/member/lightningpro535/stats/rapid?days=0"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{ color: '#fff' }}
+  >
+    <i className="fa-solid fa-chess-knight fa-2x" />
+  </a>
 
-  </div>
+  {/* X/Twitter */}
+  <a
+    href="https://x.com/lightningpro535"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{ color: '#fff' }}
+  >
+    <i className="fa-brands fa-x-twitter fa-2x" />
+  </a>
+</div>
 
       {/* ───────── CONTACT SECTION (new) ───────── */}
       <ContactSection />
@@ -218,5 +185,8 @@ export default function Home() {
 
 </section>
     </main>
+
+      </>
+
   );
 }
