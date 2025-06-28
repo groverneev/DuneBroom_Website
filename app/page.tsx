@@ -163,22 +163,6 @@ export default function Home() {
           </a>
 
           <a
-            href="https://chess.com/member/lightningpro535/stats/rapid?days=0"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              background: '#F39C12',
-              color: '#fff',
-              borderRadius: 8,
-              padding: '10px 24px',
-              fontWeight: 600,
-              textDecoration: 'none',
-            }}
-          >
-            Chess
-          </a>
-
-          <a
             href="https://x.com/lightningpro535"
             target="_blank"
             rel="noopener noreferrer"
