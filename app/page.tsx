@@ -108,14 +108,13 @@ export default function Home() {
         }}
       >
         <h2 style={{ fontSize: 34, fontWeight: 700, marginBottom: 16 }}>
-          Resources
+          About Me
         </h2>
         <p style={{ fontSize: 20, maxWidth: 650, textAlign: "center" }}>
-          Access lesson plans, advocacy toolkits, and opportunities for teachers
-          and students to join DuneBroom’s movement.
+          Neev is a rising sophomore at The Harker School who is passionate about Computer Science, Chess, and Music.
         </p>
         <a
-          href="/resources"
+          href="/about_me"
           style={{
             marginTop: 24,
             display: "inline-block",
@@ -130,7 +129,7 @@ export default function Home() {
             transition: "background 0.2s, color 0.2s",
           }}
         >
-          See all resources &rarr;
+          Learn More About Me &rarr;
         </a>
       </section>
 
