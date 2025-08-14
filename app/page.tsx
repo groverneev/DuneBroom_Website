@@ -72,8 +72,7 @@ export default function Home() {
           About DuneBroom
         </h2>
         <p style={{ fontSize: 20, maxWidth: 650, textAlign: "center" }}>
-          DuneBroom is a student-led robotics project tackling beach pollution
-          with autonomous robots and edge AI.
+          DuneBroom is a student-led robotics project tackling beach pollution with autonomous robots and edge AI.
         </p>
         <a
           href="/about_me"
@@ -133,10 +132,9 @@ export default function Home() {
         </a>
       </section>
 
-      {/* CONTACT PREVIEW */}
+      {/* CONTACT SECTION */}
 
       <section id="contact" style={{}}>
-        {/* ───────── CONTACT SECTION (new) ───────── */}
         <ContactSection />
       </section>
     </main>
