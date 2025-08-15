@@ -20,8 +20,7 @@ DuneBroom is a youth-driven robotics project dedicated to combating beach pollut
 
 ```plaintext
 /
-├── public/        # Static assets: images, icons, etc.
-├── src/ or app/   # Website code (React, Next.js, or static build)
-├── README.md      # This file
-└── resources/     # Lesson plans, toolkits, educational content
+├── public/        # Static assets (images, icons, etc.)
+├── app/           # Main website code
+└── README.md      # You are here!
 ```
