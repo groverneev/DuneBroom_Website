@@ -10,7 +10,12 @@ DuneBroom is a youth-driven robotics project dedicated to combating beach pollut
 
 ---
 
-## ✨ About Me - ♟ **Chess** — USCF ~1800, Chess.com ~2100, tournament player since age 5 - 🖨 **DuneBroom** — Creator of **[dunebroom](https://dunebroom.com)**, an autonomous beach-cleaning robot - 💻 **Programming** — Primarily in Python, Java, and TypeScript; exploring ML, AI safety, and red teaming - 📚 **Writer** — Weekly blog at [Tech Unpacked](https://techunpacked.substack.com)
+## ✨ About Me
+
+- ♟ **Chess** — USCF ~1800, Chess.com ~2100, tournament player since age 5
+- 🖨 **DuneBroom** — Creator of **[dunebroom](https://dunebroom.com)**, an autonomous beach-cleaning robot
+- 💻 **Programming** — Primarily in Python, Java, and TypeScript; exploring ML, AI safety, and red teaming
+- 📚 **Writer** — Weekly blog at [Tech Unpacked](https://techunpacked.substack.com)
 
 ---
 
