@@ -1,9 +1,4 @@
 import Image from "next/image";
-import { FaGithub } from "react-icons/fa";
-import { SiSubstack } from "react-icons/si";
-import { FaLinkedin } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
-import { CgWebsite } from "react-icons/cg";
 
 export default function AboutPage() {
   return (
