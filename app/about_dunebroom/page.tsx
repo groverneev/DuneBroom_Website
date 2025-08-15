@@ -53,7 +53,7 @@ export default function AboutPage() {
           <b>DuneBroom</b> is a student-led robotics project dedicated to making
           a real-world impact for our beaches and our planet. Founded by{" "}
           <b>Neev Grover</b>, DuneBroom builds and deploys autonomous robots
-          powered by edge AI to clean beaches and collect environmental data.
+          powered by edge AI to clean beaches.
         </p>
 
         <div
