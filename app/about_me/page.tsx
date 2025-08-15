@@ -108,7 +108,7 @@ export default function AboutPage() {
               marginBottom: 8,
             }}
           >
-            <b>Neev</b> is a rising sophomore at The Harker School who is
+            <b>Neev</b> is a sophomore at The Harker School who is
             passionate about Computer Science, Chess, and Music. He enjoys
             building projects, playing competitive chess, and writing about
             technology on his blog at{" "}
