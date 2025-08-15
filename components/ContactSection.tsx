@@ -2,11 +2,6 @@
 "use client";
 
 import { useState, FormEvent } from "react";
-import { FaGithub } from "react-icons/fa";
-import { SiSubstack } from "react-icons/si";
-import { FaLinkedin } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
-import { IoLogoVercel } from "react-icons/io5";
 
 // npm install react-icons
 
@@ -79,56 +74,7 @@ export default function ContactSection() {
           justifyContent: "center",
           marginBottom: 32,
         }}
-      >
-        {/* GitHub */}
-        <a
-          href="https://github.com/groverneev"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ color: "#fff" }}
-        >
-          <FaGithub size={28} />
-        </a>
-
-        {/* Substack */}
-        <a
-          href="https://techunpacked.substack.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ color: "#fff" }}
-        >
-          <SiSubstack size={28} />
-        </a>
-
-        {/* X */}
-        <a
-          href="https://x.com/lightningpro535"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ color: "#fff" }}
-        >
-          <FaXTwitter size={28} />
-        </a>
-
-        {/* LinkedIn */}
-        <a
-          href="https://www.linkedin.com/in/neev-grover-3bb873332/"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ color: "#fff" }}
-        >
-          <FaLinkedin size={28} />
-        </a>
-
-        <a
-          href="https://www.neevgrover.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ color: "#fff" }}
-        >
-          <IoLogoVercel size={28} />
-        </a>
-      </div>
+      ></div>
 
       <form
         onSubmit={handleSubmit}

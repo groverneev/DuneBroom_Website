@@ -17,7 +17,7 @@ export default function Home() {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          background: "#0e0e0e",
+          background: "#0e1321",
           color: "#fff",
           textAlign: "center",
           padding: "0 2rem",
@@ -37,13 +37,13 @@ export default function Home() {
           Sweep Clean, Think Smart
         </h2>
         <p style={{ fontSize: 22, maxWidth: 600, margin: "0 auto 2rem auto" }}>
-          Robotics, Innovation, and Clean Oceans.
+          Robotics, Innovation, and Clean Beaches
         </p>
         <a
-          href="/mission_statement"
+          href="/about_dunebroom"
           style={{
             background: "#fff",
-            color: "#0e0e0e",
+            color: "#0e1321",
             fontWeight: 700,
             fontSize: 20,
             borderRadius: 8,
@@ -52,7 +52,7 @@ export default function Home() {
             boxShadow: "0 4px 16px rgba(0,0,0,0.06)",
           }}
         >
-          Mission Statement
+          About DuneBroom
         </a>
       </section>
 
@@ -69,10 +69,11 @@ export default function Home() {
         }}
       >
         <h2 style={{ fontSize: 34, fontWeight: 700, marginBottom: 16 }}>
-          About DuneBroom
+          About Me
         </h2>
         <p style={{ fontSize: 20, maxWidth: 650, textAlign: "center" }}>
-          DuneBroom is a student-led robotics project tackling beach pollution with autonomous robots and edge AI.
+          Neev is a sophomore at The Harker School who is passionate about
+          Computer Science, Chess, and Music.
         </p>
         <a
           href="/about_me"
@@ -90,7 +91,7 @@ export default function Home() {
             transition: "background 0.2s, color 0.2s",
           }}
         >
-          Learn More &rarr;
+          Learn More About Me &rarr;
         </a>
       </section>
 
@@ -107,10 +108,11 @@ export default function Home() {
         }}
       >
         <h2 style={{ fontSize: 34, fontWeight: 700, marginBottom: 16 }}>
-          About Me
+          Blog
         </h2>
         <p style={{ fontSize: 20, maxWidth: 650, textAlign: "center" }}>
-          Neev is a sophomore at The Harker School who is passionate about Computer Science, Chess, and Music.
+          Want to understand the latest in technology? Read my blog for guides,
+          tips, and deep dives into all things tech!{" "}
         </p>
         <a
           href="/about_me"
@@ -128,7 +130,7 @@ export default function Home() {
             transition: "background 0.2s, color 0.2s",
           }}
         >
-          Learn More About Me &rarr;
+          Read my Blogs &rarr;
         </a>
       </section>
 

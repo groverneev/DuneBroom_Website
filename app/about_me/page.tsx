@@ -1,56 +1,26 @@
 import Image from "next/image";
+import { FaGithub } from "react-icons/fa";
+import { SiSubstack } from "react-icons/si";
+import { FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { CgWebsite } from "react-icons/cg";
 
 export default function AboutPage() {
   return (
-    <main
-      style={{
-        minHeight: "80vh",
-        background: "#fff",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        fontFamily: "Inter, Arial, Helvetica, sans-serif",
-        padding: "0",
-        margin: "0",
-      }}
-    >
-      {/* Responsive style tag */}
-      <style>{`
-        @media (max-width: 700px) {
-          .about-section {
-            flex-direction: column !important;
-            align-items: center !important;
-            gap: 1.2rem !important;
-            text-align: center !important;
-            padding: 2rem 5vw !important;
-          }
-          .about-text {
-            max-width: 98vw !important;
-            width: 100% !important;
-            margin: 0 auto !important;
-            text-align: center !important;
-            font-size: 17px !important;
-          }
-          .about-section img {
-            margin: 0 auto !important;
-          }
-        }
-      `}</style>
-
+    <main style={{ background: "#f5f6fa", fontFamily: "Inter, sans-serif" }}>
+      {/* ───────── HERO SECTION ───────── */}
       <section
-        className="about-section"
+        id="hero"
         style={{
-          width: "100%",
-          maxWidth: 820,
-          margin: "4rem auto 0 auto",
-          background: "#f7f7f7",
-          borderRadius: 28,
-          padding: "3rem 2rem",
-          boxShadow: "0 6px 32px rgba(20,20,25,0.06)",
+          minHeight: "85vh",
           display: "flex",
-          flexDirection: "row",
+          flexDirection: "column",
+          justifyContent: "center",
           alignItems: "center",
-          gap: "2.5rem",
+          background: "#0E1321",
+          color: "#fff",
+          textAlign: "center",
+          padding: "0 2rem",
         }}
       >
         {/* --- Profile Image --- */}
@@ -70,72 +40,82 @@ export default function AboutPage() {
             }}
           />
         </div>
-        {/* --- Main About Text --- */}
-        <div
-          className="about-text"
+
+        <h1
           style={{
-            maxWidth: 420,
-            width: "100%",
-            margin: "0 auto",
+            fontSize: 64,
+            fontWeight: 800,
+            letterSpacing: "-0.03em",
+            margin: 0,
           }}
         >
-          <h1
-            style={{
-              fontSize: 36,
-              fontWeight: 800,
-              letterSpacing: "-0.01em",
-              marginBottom: 8,
-              color: "#0e0e0e",
-            }}
+          Neev Grover
+        </h1>
+        <h2 style={{ fontSize: 28, fontWeight: 400, margin: "1.2rem 0" }}>
+          Sophomore at the Harker School
+        </h2>
+        <p style={{ fontSize: 22, maxWidth: 600, margin: "0 auto 2rem auto" }}>
+          Neev is passionate about Computer Science, Chess, and Music. He enjoys
+          building projects, playing competitive chess, and writing about
+          technology on his blog.
+        </p>
+
+        <div
+          style={{
+            display: "flex",
+            gap: 24,
+            justifyContent: "center",
+            marginBottom: 32,
+          }}
+        >
+          {/* GitHub */}
+          <a
+            href="https://github.com/groverneev"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#fff" }}
           >
-            About <span style={{ color: "#2563eb" }}>Me</span>
-          </h1>
-          <h2
-            style={{
-              fontSize: 20,
-              fontWeight: 600,
-              color: "#13c285",
-              margin: 0,
-              marginBottom: 20,
-            }}
+            <FaGithub size={37} />
+          </a>
+
+          {/* Substack */}
+          <a
+            href="https://techunpacked.substack.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#fff" }}
           >
-            Neev Grover • Founder & Student Engineer
-          </h2>
-          <p
-            style={{
-              fontSize: 18,
-              color: "#222",
-              marginBottom: 8,
-            }}
+            <SiSubstack size={37} />
+          </a>
+
+          {/* X */}
+          <a
+            href="https://x.com/lightningpro535"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#fff" }}
           >
-            <b>Neev</b> is a sophomore at The Harker School who is
-            passionate about Computer Science, Chess, and Music. He enjoys
-            building projects, playing competitive chess, and writing about
-            technology on his blog at{" "}
-            <a
-              href="https://techunpacked.substack.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Substack
-            </a>
-            .
-          </p>
-          <p
-            style={{
-              fontSize: 18,
-              color: "#222",
-            }}
+            <FaXTwitter size={37} />
+          </a>
+
+          {/* LinkedIn */}
+          <a
+            href="https://www.linkedin.com/in/neev-grover-3bb873332/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#fff" }}
           >
-            Neev founded DuneBroom in September 2024 after combining his
-            interests in machine learning, robotics, and environmental impact.
-            What started as a simple project quickly evolved into an autonomous
-            beach-cleaning robot, blending 3D printing, computer vision, and
-            hardware design. Through DuneBroom, Neev aims to apply technology to
-            solve real-world sustainability challenges.
-            <br />
-            <br />
-          </p>
+            <FaLinkedin size={37} />
+          </a>
+
+          <a
+            href="https://www.neevgrover.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#fff" }}
+          >
+            <CgWebsite size={37} />
+          </a>
         </div>
       </section>
     </main>
