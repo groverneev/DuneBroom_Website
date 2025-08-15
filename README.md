@@ -12,7 +12,7 @@ DuneBroom is a youth-driven robotics project dedicated to combating beach pollut
 
 ## ✨ About Me
 
-Neev Grover is a Sophomore at the Harker School passionate about Computer Science, Chess, and Music. He enjoys building projects, playing competitive chess, and writing about technology on his **[blog](https://techunpacked.substack.com)**.
+**[Neev Grover](https://neevgrover.com)** is a Sophomore at the Harker School passionate about Computer Science, Chess, and Music. He enjoys building projects, playing competitive chess, and writing about technology on his **[blog](https://techunpacked.substack.com)**.
 
 ---
 
