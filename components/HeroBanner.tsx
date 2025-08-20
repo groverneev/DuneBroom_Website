@@ -11,7 +11,7 @@ export default function HeroBanner() {
         DuneBroom.com
       </h1>
       <p style={{ fontSize: 22, marginTop: 10, color: "#334155" }}>
-        Sweep Clean, Think Smart
+        Robotics, Innovation, and Clean Beaches
       </p>
       <div
         style={{
@@ -25,7 +25,7 @@ export default function HeroBanner() {
           boxShadow: "0 2px 12px rgba(0,0,0,0.08)",
         }}
       >
-        Mission: Clean beaches with robotics & youth-powered innovation
+        Mission: Clean beaches with robotics and innovation
       </div>
     </section>
   );

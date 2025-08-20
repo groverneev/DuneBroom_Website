@@ -34,10 +34,9 @@ export default function Home() {
           DuneBroom
         </h1>
         <h2 style={{ fontSize: 28, fontWeight: 400, margin: "1.2rem 0" }}>
-          Sweep Clean, Think Smart
-        </h2>
-        <p style={{ fontSize: 22, maxWidth: 600, margin: "0 auto 2rem auto" }}>
           Robotics, Innovation, and Clean Beaches
+        </h2>
+        <p style={{ fontSize: 22, maxWidth: 600, margin: "0 auto 0.5rem auto" }}> {/*adds whitespace */}
         </p>
         <a
           href="/about_dunebroom"
