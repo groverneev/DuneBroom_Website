@@ -3,8 +3,8 @@ import Footer from "../components/Footer";
 import "./globals.css";
 
 export const metadata = {
-  title: "DuneBroom | Sweep Clean, Think Smart",
-  description: "Robotics, youth innovation, and clean oceans.",
+  title: "DuneBroom",
+  description: "Robotics, Innovation, and Clean Oceans",
 };
 
 export default function RootLayout({
