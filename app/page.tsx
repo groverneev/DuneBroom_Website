@@ -1,4 +1,4 @@
-import ContactSection from "@/components/ContactSection"; // ← make sure the path matches your project
+import ContactSection from "@/components/ContactSection";
 
 export default function Home() {
   return (
@@ -36,7 +36,11 @@ export default function Home() {
         <h2 style={{ fontSize: 28, fontWeight: 400, margin: "1.2rem 0" }}>
           Robotics, Innovation, and Clean Beaches
         </h2>
-        <p style={{ fontSize: 22, maxWidth: 600, margin: "0 auto 0.5rem auto" }}> {/*adds whitespace */}
+        <p
+          style={{ fontSize: 22, maxWidth: 600, margin: "0 auto 0.5rem auto" }}
+        >
+          {" "}
+          {/*adds whitespace */}
         </p>
         <a
           href="/about_dunebroom"
