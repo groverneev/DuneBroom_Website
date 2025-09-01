@@ -76,7 +76,7 @@ export default function Home() {
         </h2>
         <p style={{ fontSize: 20, maxWidth: 650, textAlign: "center" }}>
           Neev is a sophomore at The Harker School who is passionate about
-          Computer Science, Chess, and Music.
+          Computer Science, Chess, and the Environment.
         </p>
         <a
           href="/about_me"
