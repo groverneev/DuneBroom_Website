@@ -118,7 +118,7 @@ export default function Home() {
           tips, and deep dives into all things tech!{" "}
         </p>
         <a
-          href="/about_me"
+          href="/blog"
           style={{
             marginTop: 24,
             display: "inline-block",
