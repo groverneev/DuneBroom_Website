@@ -90,7 +90,7 @@ export default function AboutPage() {
 
           {/* X */}
           <a
-            href="https://x.com/lightningpro535"
+            href="https://x.com/groverneev01"
             target="_blank"
             rel="noopener noreferrer"
             style={{ color: "#fff" }}

@@ -1,9 +1,6 @@
-"use client";
-
 export default function PrivacyPolicy() {
   return (
-    <main style={{ background: "#f5f6fa", fontFamily: "Inter, sans-serif" }}>
-      <section
+    <section
         style={{
           padding: "6rem 2rem",
           background: "#0E1321",
@@ -52,6 +49,5 @@ export default function PrivacyPolicy() {
           </p>
         </div>
       </section>
-    </main>
   );
 }
