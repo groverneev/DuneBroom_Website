@@ -2,7 +2,6 @@ import { FaGithub } from "react-icons/fa";
 import { SiSubstack } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { CgWebsite } from "react-icons/cg";
 
 export default function Footer() {
   return (
@@ -16,8 +15,19 @@ export default function Footer() {
         fontSize: 14,
       }}
     >
-      &copy; {new Date().getFullYear()} DuneBroom. All rights reserved.
-      <br />
+      &copy; {new Date().getFullYear()} Neev Grover. All rights reserved.{" "}
+      <a
+        href="/privacy-policy"
+        style={{
+          color: "#828893",
+          textDecoration: "none",
+          fontSize: "14px",
+          marginTop: "8px",
+          display: "inline-block",
+        }}
+      >
+        Privacy Policy
+      </a>
       {/* Social Media Icons */}
       <div style={{ marginTop: 16 }}>
         {/* GitHub */}
@@ -42,7 +52,7 @@ export default function Footer() {
 
         {/* X */}
         <a
-          href="https://x.com/lightningpro535"
+          href="https://x.com/groverneev01"
           target="_blank"
           rel="noopener noreferrer"
           style={{ color: "#828893", margin: "0 12px" }}
@@ -58,15 +68,6 @@ export default function Footer() {
           style={{ color: "#828893", margin: "0 12px" }}
         >
           <FaLinkedin size={23} />
-        </a>
-
-        <a
-          href="https://www.neevgrover.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ color: "#828893" }}
-        >
-          <CgWebsite size={22} />
         </a>
       </div>
     </footer>
