@@ -2,6 +2,7 @@ import { FaGithub } from "react-icons/fa";
 import { SiSubstack } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { CgWebsite } from "react-icons/cg";
 
 export default function Footer() {
   return (
@@ -62,13 +63,23 @@ export default function Footer() {
 
         {/* LinkedIn */}
         <a
-          href="https://www.linkedin.com/in/neev-grover/"
+          href="https://www.linkedin.com/in/neevgrover/"
           target="_blank"
           rel="noopener noreferrer"
           style={{ color: "#828893", margin: "0 12px" }}
         >
           <FaLinkedin size={23} />
         </a>
+
+        <a
+          href="https://www.neevgrover.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "#828893", margin: "0 12px" }}
+        >
+          <CgWebsite size={23} />
+        </a>
+
       </div>
     </footer>
   );
