@@ -1,6 +1,7 @@
 import ContactSection from "@/components/ContactSection";
 import BlogSection from "@/components/BlogSection";
 import AboutMeSection from "@/components/AboutMeSection";
+import ProjectsSection from "@/components/ProjectsSection";
 
 export default function Home() {
   return (
@@ -63,14 +64,15 @@ export default function Home() {
 
       {/* ───────── BLOG SECTION ───────── */}
       <BlogSection />
-      {/* ───────── BLOG SECTION ───────── */}
+
+      {/* ───────── PROJECTS SECTION ───────── */}
+      <ProjectsSection />
+
+      {/* ───────── ABOUT ME SECTION ───────── */}
       <AboutMeSection />
 
       {/* CONTACT SECTION */}
-
-      <section id="contact" style={{}}>
-        <ContactSection />
-      </section>
+      <ContactSection />
     </main>
   );
 }

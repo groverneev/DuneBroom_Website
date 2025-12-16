@@ -3,7 +3,6 @@ import { FaGithub } from "react-icons/fa";
 import { SiSubstack } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { CgWebsite } from "react-icons/cg";
 
 export default function AboutPage() {
   return (
@@ -55,9 +54,9 @@ export default function AboutPage() {
           Sophomore at the Harker School
         </h2>
         <p style={{ fontSize: 22, maxWidth: 600, margin: "0 auto 2rem auto" }}>
-          Neev is passionate about Computer Science, Chess, and the Environment. He enjoys
-          building projects, playing competitive chess, and writing about
-          technology on his blog.
+          Neev is passionate about Computer Science, Chess, and the Environment.
+          He enjoys building projects, playing competitive chess, and writing
+          about technology on his blog.
         </p>
 
         <div
@@ -106,15 +105,6 @@ export default function AboutPage() {
             style={{ color: "#fff" }}
           >
             <FaLinkedin size={37} />
-          </a>
-
-          <a
-            href="https://www.neevgrover.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: "#fff" }}
-          >
-            <CgWebsite size={37} />
           </a>
         </div>
       </section>
