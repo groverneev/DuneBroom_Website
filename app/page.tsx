@@ -1,7 +1,5 @@
 import ContactSection from "@/components/ContactSection";
-import BlogSection from "@/components/BlogSection";
 import AboutMeSection from "@/components/AboutMeSection";
-import ProjectsSection from "@/components/ProjectsSection";
 
 export default function Home() {
   return (
@@ -61,12 +59,6 @@ export default function Home() {
           About DuneBroom
         </a>
       </section>
-
-      {/* ───────── BLOG SECTION ───────── */}
-      <BlogSection />
-
-      {/* ───────── PROJECTS SECTION ───────── */}
-      <ProjectsSection />
 
       {/* ───────── ABOUT ME SECTION ───────── */}
       <AboutMeSection />
