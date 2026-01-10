@@ -1,13 +1,15 @@
+"use client";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function AboutPage() {
   return (
-    <main style={{ background: "#f5f6fa", fontFamily: "Inter, sans-serif" }}>
+    <main style={{ background: "#0E1321", fontFamily: "Inter, sans-serif" }}>
       {/* ───────── HERO SECTION ───────── */}
       <section
         id="hero"
         style={{
-          minHeight: "85vh",
+          minHeight: "70vh",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -15,21 +17,21 @@ export default function AboutPage() {
           background: "#0E1321",
           color: "#fff",
           textAlign: "center",
-          padding: "0 2rem",
+          padding: "4rem 2rem 2rem 2rem",
         }}
       >
-        {/* --- Profile Image --- */}
-        <div style={{ flex: "none" }}>
+        {/* --- Robot Image --- */}
+        <div style={{ flex: "none", marginBottom: "2rem" }}>
           <Image
             src="/dunebroom_robot.png"
-            alt="Neev Grover, founder of DuneBroom"
+            alt="DuneBroom Robot"
             width={140}
             height={140}
             style={{
               borderRadius: "50%",
-              border: "4px solid #111",
-              boxShadow: "0 4px 18px rgba(0,0,0,0.09)",
-              background: "#eee",
+              border: "4px solid #1e2533",
+              boxShadow: "0 4px 18px rgba(0,0,0,0.3)",
+              background: "#1e2533",
               display: "block",
               margin: 0,
             }}
@@ -42,26 +44,248 @@ export default function AboutPage() {
             fontWeight: 800,
             letterSpacing: "-0.03em",
             margin: 0,
+            marginBottom: "1rem",
           }}
         >
           DuneBroom
         </h1>
-        <h2 style={{ fontSize: 15, fontWeight: 400, margin: "0.5rem 0" }}></h2>
-        <p style={{ fontSize: 21, maxWidth: 600, margin: "0 auto 2rem auto" }}>
+        <p style={{ fontSize: 21, maxWidth: 700, margin: "0 auto 3rem auto", lineHeight: 1.6, color: "#e5e7eb" }}>
           <b>DuneBroom</b> is a student-led robotics project dedicated to making
           a real-world impact for our beaches and our planet. Founded by{" "}
           <b>Neev Grover</b>, DuneBroom builds autonomous robots powered by edge
-          AI to clean beaches.
+          AI to clean beaches efficiently and autonomously.
         </p>
+      </section>
 
+      {/* ───────── NAVIGATION CARDS SECTION ───────── */}
+      <section
+        style={{
+          maxWidth: 1200,
+          margin: "0 auto",
+          padding: "2rem 2rem 6rem 2rem",
+        }}
+      >
+        <h2
+          style={{
+            fontSize: 36,
+            fontWeight: 700,
+            color: "#fff",
+            textAlign: "center",
+            marginBottom: "3rem",
+          }}
+        >
+          Learn More About DuneBroom
+        </h2>
         <div
           style={{
-            display: "flex",
-            gap: 24,
-            justifyContent: "center",
-            marginBottom: 32,
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+            gap: "2rem",
           }}
-        ></div>
+        >
+          {/* Overview Card */}
+          <Link
+            href="/about_dunebroom/overview"
+            style={{
+              textDecoration: "none",
+              display: "block",
+            }}
+          >
+            <div
+              style={{
+                background: "#1e2533",
+                borderRadius: 16,
+                padding: "2.5rem",
+                transition: "transform 0.2s, box-shadow 0.2s",
+                cursor: "pointer",
+                border: "2px solid transparent",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "translateY(-4px)";
+                e.currentTarget.style.boxShadow = "0 8px 24px rgba(59, 130, 246, 0.2)";
+                e.currentTarget.style.borderColor = "#3b82f6";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "translateY(0)";
+                e.currentTarget.style.boxShadow = "none";
+                e.currentTarget.style.borderColor = "transparent";
+              }}
+            >
+              <div
+                style={{
+                  width: 56,
+                  height: 56,
+                  borderRadius: 12,
+                  background: "linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  marginBottom: "1.5rem",
+                  fontSize: 28,
+                }}
+              >
+                📊
+              </div>
+              <h3
+                style={{
+                  fontSize: 24,
+                  fontWeight: 700,
+                  color: "#fff",
+                  marginBottom: "0.75rem",
+                }}
+              >
+                Overview
+              </h3>
+              <p
+                style={{
+                  fontSize: 16,
+                  color: "#9ca3af",
+                  lineHeight: 1.6,
+                  margin: 0,
+                }}
+              >
+                Learn about the problem DuneBroom addresses, our hypothesis, and
+                the key capabilities that make this autonomous beach-cleaning robot
+                effective.
+              </p>
+            </div>
+          </Link>
+
+          {/* System Logic Card */}
+          <Link
+            href="/about_dunebroom/system-logic"
+            style={{
+              textDecoration: "none",
+              display: "block",
+            }}
+          >
+            <div
+              style={{
+                background: "#1e2533",
+                borderRadius: 16,
+                padding: "2.5rem",
+                transition: "transform 0.2s, box-shadow 0.2s",
+                cursor: "pointer",
+                border: "2px solid transparent",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "translateY(-4px)";
+                e.currentTarget.style.boxShadow = "0 8px 24px rgba(139, 92, 246, 0.2)";
+                e.currentTarget.style.borderColor = "#8b5cf6";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "translateY(0)";
+                e.currentTarget.style.boxShadow = "none";
+                e.currentTarget.style.borderColor = "transparent";
+              }}
+            >
+              <div
+                style={{
+                  width: 56,
+                  height: 56,
+                  borderRadius: 12,
+                  background: "linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  marginBottom: "1.5rem",
+                  fontSize: 28,
+                }}
+              >
+                ⚙️
+              </div>
+              <h3
+                style={{
+                  fontSize: 24,
+                  fontWeight: 700,
+                  color: "#fff",
+                  marginBottom: "0.75rem",
+                }}
+              >
+                System Logic
+              </h3>
+              <p
+                style={{
+                  fontSize: 16,
+                  color: "#9ca3af",
+                  lineHeight: 1.6,
+                  margin: 0,
+                }}
+              >
+                Discover how DuneBroom operates autonomously through patrol mode,
+                event-driven identification, and intelligent decision-making to
+                clean beaches efficiently.
+              </p>
+            </div>
+          </Link>
+
+          {/* Technical Architecture Card */}
+          <Link
+            href="/about_dunebroom/technical-architecture"
+            style={{
+              textDecoration: "none",
+              display: "block",
+            }}
+          >
+            <div
+              style={{
+                background: "#1e2533",
+                borderRadius: 16,
+                padding: "2.5rem",
+                transition: "transform 0.2s, box-shadow 0.2s",
+                cursor: "pointer",
+                border: "2px solid transparent",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "translateY(-4px)";
+                e.currentTarget.style.boxShadow = "0 8px 24px rgba(16, 185, 129, 0.2)";
+                e.currentTarget.style.borderColor = "#10b981";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "translateY(0)";
+                e.currentTarget.style.boxShadow = "none";
+                e.currentTarget.style.borderColor = "transparent";
+              }}
+            >
+              <div
+                style={{
+                  width: 56,
+                  height: 56,
+                  borderRadius: 12,
+                  background: "linear-gradient(135deg, #10b981 0%, #059669 100%)",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  marginBottom: "1.5rem",
+                  fontSize: 28,
+                }}
+              >
+                🔧
+              </div>
+              <h3
+                style={{
+                  fontSize: 24,
+                  fontWeight: 700,
+                  color: "#fff",
+                  marginBottom: "0.75rem",
+                }}
+              >
+                Technical Architecture
+              </h3>
+              <p
+                style={{
+                  fontSize: 16,
+                  color: "#9ca3af",
+                  lineHeight: 1.6,
+                  margin: 0,
+                }}
+              >
+                Explore the hardware implementation, including power systems,
+                processing units, sensors, and actuators that bring DuneBroom to life.
+              </p>
+            </div>
+          </Link>
+        </div>
       </section>
     </main>
   );

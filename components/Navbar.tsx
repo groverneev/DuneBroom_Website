@@ -1,17 +1,40 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useRouter, usePathname } from "next/navigation";
+import Link from "next/link";
 
 const navLinks = [
   { href: "/about_me", label: "About Me" },
-  { href: "/about_dunebroom", label: "About DuneBroom" },
+  { 
+    href: "/about_dunebroom", 
+    label: "About DuneBroom",
+    submenu: [
+      { href: "/about_dunebroom", label: "Main Page" },
+      { href: "/about_dunebroom/overview", label: "Overview" },
+      { href: "/about_dunebroom/system-logic", label: "System Logic" },
+      { href: "/about_dunebroom/technical-architecture", label: "Technical Architecture" },
+    ]
+  },
   { href: "/#contact", label: "Contact" },
 ];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLLIElement>(null);
   const router = useRouter();
   const pathname = usePathname();
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setDropdownOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
     <nav
@@ -53,7 +76,7 @@ export default function Navbar() {
         </button>
 
         {/* Logo/title */}
-        <a
+        <Link
           href="/"
           className="navbar-logo"
           style={{
@@ -64,7 +87,7 @@ export default function Navbar() {
           }}
         >
           DuneBroom
-        </a>
+        </Link>
 
         {/* Main nav links - hidden on mobile */}
         <ul
@@ -79,19 +102,87 @@ export default function Navbar() {
           className="navbar-links"
         >
           {navLinks.map((link) => (
-            <li key={link.href}>
-              <a
-                href={link.href}
-                style={{
-                  color: "#111",
-                  textDecoration: "none",
-                  fontWeight: 500,
-                  fontSize: 18,
-                  transition: "color 0.2s",
-                }}
-              >
-                {link.label}
-              </a>
+            <li 
+              key={link.href}
+              style={{ position: "relative" }}
+              ref={link.submenu ? dropdownRef : null}
+            >
+              {link.submenu ? (
+                <>
+                  <button
+                    onClick={() => setDropdownOpen(!dropdownOpen)}
+                    style={{
+                      background: "none",
+                      border: "none",
+                      color: "#111",
+                      textDecoration: "none",
+                      fontWeight: 500,
+                      fontSize: 18,
+                      transition: "color 0.2s",
+                      cursor: "pointer",
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 4,
+                      padding: 0,
+                    }}
+                  >
+                    {link.label} {dropdownOpen ? "▲" : "▼"}
+                  </button>
+                  {dropdownOpen && (
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "100%",
+                        left: 0,
+                        marginTop: "0.5rem",
+                        background: "#fff",
+                        borderRadius: 8,
+                        boxShadow: "0 4px 16px rgba(0,0,0,0.1)",
+                        minWidth: 220,
+                        padding: "0.5rem 0",
+                        zIndex: 1000,
+                      }}
+                    >
+                      {link.submenu.map((subLink) => (
+                        <Link
+                          key={subLink.href}
+                          href={subLink.href}
+                          onClick={() => setDropdownOpen(false)}
+                          style={{
+                            display: "block",
+                            padding: "0.75rem 1.5rem",
+                            color: "#111",
+                            textDecoration: "none",
+                            fontSize: 16,
+                            transition: "background 0.2s",
+                          }}
+                          onMouseEnter={(e) => {
+                            e.currentTarget.style.background = "#f5f6fa";
+                          }}
+                          onMouseLeave={(e) => {
+                            e.currentTarget.style.background = "transparent";
+                          }}
+                        >
+                          {subLink.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </>
+              ) : (
+                <Link
+                  href={link.href}
+                  style={{
+                    color: "#111",
+                    textDecoration: "none",
+                    fontWeight: 500,
+                    fontSize: 18,
+                    transition: "color 0.2s",
+                  }}
+                >
+                  {link.label}
+                </Link>
+              )}
             </li>
           ))}
         </ul>
@@ -127,22 +218,66 @@ export default function Navbar() {
                 padding: 0,
                 margin: 0,
                 alignItems: "flex-start",
+                width: "100%",
               }}
             >
               {navLinks.map((link) => (
-                <li key={link.href}>
-                  <a
-                    href={link.href}
-                    style={{
-                      color: "#111",
-                      textDecoration: "none",
-                      fontWeight: 500,
-                      fontSize: 22,
-                    }}
-                    onClick={() => setOpen(false)}
-                  >
-                    {link.label}
-                  </a>
+                <li key={link.href} style={{ width: "100%" }}>
+                  {link.submenu ? (
+                    <div>
+                      <div
+                        style={{
+                          color: "#111",
+                          fontWeight: 600,
+                          fontSize: 22,
+                          marginBottom: 12,
+                        }}
+                      >
+                        {link.label}
+                      </div>
+                      <ul
+                        style={{
+                          listStyle: "none",
+                          padding: 0,
+                          margin: 0,
+                          marginLeft: 16,
+                          display: "flex",
+                          flexDirection: "column",
+                          gap: 16,
+                        }}
+                      >
+                        {link.submenu.map((subLink) => (
+                          <li key={subLink.href}>
+                            <Link
+                              href={subLink.href}
+                              style={{
+                                color: "#666",
+                                textDecoration: "none",
+                                fontWeight: 500,
+                                fontSize: 18,
+                              }}
+                              onClick={() => setOpen(false)}
+                            >
+                              {subLink.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      style={{
+                        color: "#111",
+                        textDecoration: "none",
+                        fontWeight: 500,
+                        fontSize: 22,
+                      }}
+                      onClick={() => setOpen(false)}
+                    >
+                      {link.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
