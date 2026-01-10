@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function TechnicalArchitecturePage() {
   return (
@@ -52,10 +53,43 @@ export default function TechnicalArchitecturePage() {
             marginBottom: "2rem",
           }}
         >
-          <p style={{ fontSize: 17, lineHeight: 1.7, color: "#e5e7eb", margin: 0 }}>
+          <p style={{ fontSize: 17, lineHeight: 1.7, color: "#e5e7eb", margin: 0, marginBottom: "1.5rem" }}>
             The DuneBroom robot was engineered using a modular hardware stack defined by specific
             performance constraints. The system is organized into four functional subsystems.
           </p>
+          <div
+            style={{
+              marginTop: "1.5rem",
+              borderRadius: 12,
+              overflow: "hidden",
+              background: "#0E1321",
+              padding: "1rem",
+            }}
+          >
+            <Image
+              src="/Figure_2_Hardware_Architecture.png"
+              alt="Figure 2: Hardware Architecture"
+              width={800}
+              height={600}
+              style={{
+                width: "100%",
+                height: "auto",
+                borderRadius: 8,
+              }}
+            />
+            <p
+              style={{
+                fontSize: 14,
+                color: "#9ca3af",
+                textAlign: "center",
+                marginTop: "0.75rem",
+                marginBottom: 0,
+                fontStyle: "italic",
+              }}
+            >
+              Figure 2: Hardware Architecture
+            </p>
+          </div>
         </div>
 
         {/* Power System */}
