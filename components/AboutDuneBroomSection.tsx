@@ -34,7 +34,7 @@ export default function AboutMeSection() {
       >
         {/* DuneBroom Project */}
         <a
-          href="/about_me"
+          href="/about_us"
           style={{
             textDecoration: "none",
             color: "inherit",

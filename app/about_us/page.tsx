@@ -58,55 +58,6 @@ export default function AboutPage() {
           He enjoys building projects, playing competitive chess, and writing
           about technology on his blog.
         </p>
-
-        <div
-          style={{
-            display: "flex",
-            gap: 24,
-            justifyContent: "center",
-            marginBottom: 32,
-          }}
-        >
-          {/* GitHub */}
-          <a
-            href="https://github.com/groverneev"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: "#fff" }}
-          >
-            <FaGithub size={37} />
-          </a>
-
-          {/* Substack */}
-          <a
-            href="https://techunpacked.substack.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: "#fff" }}
-          >
-            <SiSubstack size={37} />
-          </a>
-
-          {/* X */}
-          <a
-            href="https://x.com/groverneev01"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: "#fff" }}
-          >
-            <FaXTwitter size={37} />
-          </a>
-
-          {/* LinkedIn */}
-          <a
-            href="https://www.linkedin.com/in/neevgrover/"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: "#fff" }}
-          >
-            <FaLinkedin size={37} />
-          </a>
-        </div>
       </section>
     </main>
   );
