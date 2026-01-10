@@ -134,7 +134,7 @@ export default function ContactSection() {
 
         {status === "sent" && (
           <p style={{ color: "#22c55e", marginTop: 8 }}>
-            Thanks! I'll be in touch soon.
+            Thanks! We'll be in touch soon.
           </p>
         )}
         {status === "error" && (
