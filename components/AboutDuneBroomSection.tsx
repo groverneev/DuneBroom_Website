@@ -19,7 +19,7 @@ export default function AboutMeSection() {
           letterSpacing: "-0.02em",
         }}
       >
-        About Me
+        About DuneBroom
       </h2>
 
       <div
@@ -100,7 +100,7 @@ export default function AboutMeSection() {
                     letterSpacing: "-0.01em",
                   }}
                 >
-                  Neev Grover
+                  DuneBroom
                 </h3>
               </div>
 
@@ -113,8 +113,7 @@ export default function AboutMeSection() {
                   maxWidth: "100%",
                 }}
               >
-                Neev is a Sophomore at the Harker School passionate about
-                Computer Science, Chess, and the Environment.
+                Learn more about the systems that power our robot
               </p>
 
               <div
@@ -128,7 +127,7 @@ export default function AboutMeSection() {
                   fontWeight: 500,
                 }}
               >
-                <span>Learn More About Me</span>
+                <span>Learn More About DuneBroom</span>
                 <svg
                   width="16"
                   height="16"

@@ -55,18 +55,8 @@ export default function ContactSection() {
           letterSpacing: "-0.03em",
         }}
       >
-        Contact Me
+        Contact Us
       </h2>
-      <p
-        style={{
-          color: "#9ca3af",
-          fontSize: 18,
-          marginBottom: 32,
-          textAlign: "center",
-        }}
-      >
-        Don't want to use the form? Email me at groverneev at gmail.com.
-      </p>
       <div
         style={{
           display: "flex",

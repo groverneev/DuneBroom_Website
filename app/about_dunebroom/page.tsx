@@ -1,68 +1,15 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function AboutPage() {
   return (
     <main style={{ background: "#0E1321", fontFamily: "Inter, sans-serif" }}>
-      {/* ───────── HERO SECTION ───────── */}
-      <section
-        id="hero"
-        style={{
-          minHeight: "70vh",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          background: "#0E1321",
-          color: "#fff",
-          textAlign: "center",
-          padding: "4rem 2rem 2rem 2rem",
-        }}
-      >
-        {/* --- Robot Image --- */}
-        <div style={{ flex: "none", marginBottom: "2rem" }}>
-          <Image
-            src="/dunebroom_robot.png"
-            alt="DuneBroom Robot"
-            width={140}
-            height={140}
-            style={{
-              borderRadius: "50%",
-              border: "4px solid #1e2533",
-              boxShadow: "0 4px 18px rgba(0,0,0,0.3)",
-              background: "#1e2533",
-              display: "block",
-              margin: 0,
-            }}
-          />
-        </div>
-
-        <h1
-          style={{
-            fontSize: 64,
-            fontWeight: 800,
-            letterSpacing: "-0.03em",
-            margin: 0,
-            marginBottom: "1rem",
-          }}
-        >
-          DuneBroom
-        </h1>
-        <p style={{ fontSize: 21, maxWidth: 700, margin: "0 auto 3rem auto", lineHeight: 1.6, color: "#e5e7eb" }}>
-          <b>DuneBroom</b> is a student-led robotics project dedicated to making
-          a real-world impact for our beaches and our planet. Founded by{" "}
-          <b>Neev Grover</b>, DuneBroom builds autonomous robots powered by edge
-          AI to clean beaches efficiently and autonomously.
-        </p>
-      </section>
-
       {/* ───────── NAVIGATION CARDS SECTION ───────── */}
       <section
         style={{
           maxWidth: 1200,
           margin: "0 auto",
-          padding: "2rem 2rem 6rem 2rem",
+          padding: "4rem 2rem 6rem 2rem",
         }}
       >
         <h2
@@ -81,6 +28,7 @@ export default function AboutPage() {
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
             gap: "2rem",
+            alignItems: "stretch",
           }}
         >
           {/* Overview Card */}
@@ -88,7 +36,8 @@ export default function AboutPage() {
             href="/about_dunebroom/overview"
             style={{
               textDecoration: "none",
-              display: "block",
+              display: "flex",
+              height: "100%",
             }}
           >
             <div
@@ -99,6 +48,9 @@ export default function AboutPage() {
                 transition: "transform 0.2s, box-shadow 0.2s",
                 cursor: "pointer",
                 border: "2px solid transparent",
+                width: "100%",
+                display: "flex",
+                flexDirection: "column",
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = "translateY(-4px)";
@@ -142,6 +94,7 @@ export default function AboutPage() {
                   color: "#9ca3af",
                   lineHeight: 1.6,
                   margin: 0,
+                  flexGrow: 1,
                 }}
               >
                 Learn about the problem DuneBroom addresses, our hypothesis, and
@@ -156,7 +109,8 @@ export default function AboutPage() {
             href="/about_dunebroom/system-logic"
             style={{
               textDecoration: "none",
-              display: "block",
+              display: "flex",
+              height: "100%",
             }}
           >
             <div
@@ -167,6 +121,9 @@ export default function AboutPage() {
                 transition: "transform 0.2s, box-shadow 0.2s",
                 cursor: "pointer",
                 border: "2px solid transparent",
+                width: "100%",
+                display: "flex",
+                flexDirection: "column",
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = "translateY(-4px)";
@@ -210,6 +167,7 @@ export default function AboutPage() {
                   color: "#9ca3af",
                   lineHeight: 1.6,
                   margin: 0,
+                  flexGrow: 1,
                 }}
               >
                 Discover how DuneBroom operates autonomously through patrol mode,
@@ -224,7 +182,8 @@ export default function AboutPage() {
             href="/about_dunebroom/technical-architecture"
             style={{
               textDecoration: "none",
-              display: "block",
+              display: "flex",
+              height: "100%",
             }}
           >
             <div
@@ -235,6 +194,9 @@ export default function AboutPage() {
                 transition: "transform 0.2s, box-shadow 0.2s",
                 cursor: "pointer",
                 border: "2px solid transparent",
+                width: "100%",
+                display: "flex",
+                flexDirection: "column",
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = "translateY(-4px)";
@@ -278,6 +240,7 @@ export default function AboutPage() {
                   color: "#9ca3af",
                   lineHeight: 1.6,
                   margin: 0,
+                  flexGrow: 1,
                 }}
               >
                 Explore the hardware implementation, including power systems,
