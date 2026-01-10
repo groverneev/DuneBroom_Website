@@ -23,6 +23,44 @@ export default function AboutPage() {
         >
           Learn More About DuneBroom
         </h2>
+
+
+      {/* Robot Image */}
+      <div
+        style={{
+          maxWidth: 1000,
+          margin: "0 auto 3rem auto",
+          borderRadius: 12,
+          overflow: "hidden",
+          background: "#0E1321",
+          padding: "1rem",
+        }}
+      >
+        <img
+          src="/DuneBroom_Robot.jpg"
+          alt="DuneBroom autonomous beach-cleaning robot with collection mechanism and Raspberry Pi controller"
+          style={{
+            width: "100%",
+            height: "auto",
+            borderRadius: 8,
+          }}
+        />
+        <p
+          style={{
+            fontSize: 14,
+            color: "#9ca3af",
+            textAlign: "center",
+            marginTop: "0.75rem",
+            marginBottom: 0,
+            fontStyle: "italic",
+          }}
+        >
+          The DuneBroom Robot
+        </p>
+      </div>
+
+
+
         <div
           style={{
             display: "grid",
