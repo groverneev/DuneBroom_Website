@@ -44,6 +44,41 @@ export default function SystemLogicPage() {
           Process Overview
         </p>
 
+        {/* Figure 3 at the top */}
+        <div
+          style={{
+            marginBottom: "2rem",
+            borderRadius: 12,
+            overflow: "hidden",
+            background: "#1e2533",
+            padding: "1.5rem",
+          }}
+        >
+          <Image
+            src="/Figure_3_Collection_Sequence.png"
+            alt="Figure 3: Debris Collection Sequence"
+            width={800}
+            height={600}
+            style={{
+              width: "100%",
+              height: "auto",
+              borderRadius: 8,
+            }}
+          />
+          <p
+            style={{
+              fontSize: 14,
+              color: "#9ca3af",
+              textAlign: "center",
+              marginTop: "0.75rem",
+              marginBottom: 0,
+              fontStyle: "italic",
+            }}
+          >
+            Figure 3: Debris Collection Sequence
+          </p>
+        </div>
+
         {/* Introduction */}
         <div
           style={{
@@ -53,45 +88,12 @@ export default function SystemLogicPage() {
             marginBottom: "2rem",
           }}
         >
-          <p style={{ fontSize: 17, lineHeight: 1.7, color: "#e5e7eb", margin: 0, marginBottom: "1.5rem" }}>
+          <p style={{ fontSize: 17, lineHeight: 1.7, color: "#e5e7eb", margin: 0 }}>
             To achieve autonomous beach cleaning, the robot operates on a continuous decision-making
             loop designed to selectively target debris while actively ignoring natural elements. The
             system functions in an &quot;Autonomous Patrol Mode,&quot; prioritizing energy efficiency
             and rapid reaction times to effectively cover large beach areas.
           </p>
-          <div
-            style={{
-              marginTop: "1.5rem",
-              borderRadius: 12,
-              overflow: "hidden",
-              background: "#0E1321",
-              padding: "1rem",
-            }}
-          >
-            <Image
-              src="/Figure_1_Operational_Workflow.png"
-              alt="Figure 1: Operational Workflow"
-              width={800}
-              height={600}
-              style={{
-                width: "100%",
-                height: "auto",
-                borderRadius: 8,
-              }}
-            />
-            <p
-              style={{
-                fontSize: 14,
-                color: "#9ca3af",
-                textAlign: "center",
-                marginTop: "0.75rem",
-                marginBottom: 0,
-                fontStyle: "italic",
-              }}
-            >
-              Figure 1: Operational Workflow
-            </p>
-          </div>
         </div>
 
         {/* Autonomous Patrol Mode */}
@@ -297,39 +299,6 @@ export default function SystemLogicPage() {
                 remains undisturbed.
               </p>
             </div>
-          </div>
-          <div
-            style={{
-              marginTop: "1.5rem",
-              borderRadius: 12,
-              overflow: "hidden",
-              background: "#0E1321",
-              padding: "1rem",
-            }}
-          >
-            <Image
-              src="/Figure_3_Collection_Sequence.png"
-              alt="Figure 3: Debris Collection Sequence"
-              width={800}
-              height={600}
-              style={{
-                width: "100%",
-                height: "auto",
-                borderRadius: 8,
-              }}
-            />
-            <p
-              style={{
-                fontSize: 14,
-                color: "#9ca3af",
-                textAlign: "center",
-                marginTop: "0.75rem",
-                marginBottom: 0,
-                fontStyle: "italic",
-              }}
-            >
-              Figure 3: Debris Collection Sequence
-            </p>
           </div>
         </div>
       </section>
