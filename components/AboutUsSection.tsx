@@ -19,7 +19,7 @@ export default function AboutMeSection() {
           letterSpacing: "-0.02em",
         }}
       >
-        About DuneBroom
+        About Us
       </h2>
 
       <div
@@ -100,7 +100,7 @@ export default function AboutMeSection() {
                     letterSpacing: "-0.01em",
                   }}
                 >
-                  DuneBroom
+                  Innovation Team
                 </h3>
               </div>
 
@@ -113,7 +113,7 @@ export default function AboutMeSection() {
                   maxWidth: "100%",
                 }}
               >
-                Learn more about the systems that power our robot
+                Learn more about the founders behind DuneBroom
               </p>
 
               <div
@@ -127,7 +127,7 @@ export default function AboutMeSection() {
                   fontWeight: 500,
                 }}
               >
-                <span>Learn More About DuneBroom</span>
+                <span>Learn More About Us</span>
                 <svg
                   width="16"
                   height="16"

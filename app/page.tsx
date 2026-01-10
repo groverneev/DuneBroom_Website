@@ -1,5 +1,5 @@
 import ContactSection from "@/components/ContactSection";
-import AboutDuneBroomSection from "@/components/AboutDuneBroomSection";
+import AboutUsSection from "@/components/AboutUsSection";
 
 export default function Home() {
   return (
@@ -61,7 +61,7 @@ export default function Home() {
       </section>
 
       {/* ───────── ABOUT ME SECTION ───────── */}
-      <AboutDuneBroomSection />
+      <AboutUsSection />
 
       {/* CONTACT SECTION */}
       <ContactSection />
