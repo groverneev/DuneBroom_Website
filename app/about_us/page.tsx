@@ -25,7 +25,7 @@ export default function AboutPage() {
         {/* --- Profile Image --- */}
         <div style={{ flex: "none" }}>
           <Image
-            src="/profile.png"
+            src="/neev_profile.png"
             alt="Neev Grover, founder of DuneBroom"
             width={140}
             height={140}
