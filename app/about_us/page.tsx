@@ -112,10 +112,10 @@ export default function AboutPage() {
               color: "#fff",
             }}
           >
-            {/* Profile Image 
+            {/* Profile Image */}
             <div style={{ flex: "none", marginBottom: "1.5rem" }}>
               <Image
-                src="/to-be-added.png"
+                src="/shradha_profile.png"
                 alt="Shradha Rachamreddy"
                 width={140}
                 height={140}
@@ -129,7 +129,7 @@ export default function AboutPage() {
                 }}
               />
             </div>
-            */}
+            
             <h1
               style={{
                 fontSize: 36,
