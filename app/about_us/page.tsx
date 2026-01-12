@@ -129,7 +129,6 @@ export default function AboutPage() {
                 }}
               />
             </div>
-            
             <h1
               style={{
                 fontSize: 36,
