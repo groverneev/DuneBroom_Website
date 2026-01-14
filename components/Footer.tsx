@@ -11,18 +11,6 @@ export default function Footer() {
       }}
     >
       &copy; {new Date().getFullYear()} DuneBroom. All rights reserved.{" "}
-      <a
-        href="/privacy-policy"
-        style={{
-          color: "#828893",
-          textDecoration: "none",
-          fontSize: "14px",
-          marginTop: "8px",
-          display: "inline-block",
-        }}
-      >
-        Privacy Policy
-      </a>
     </footer>
   );
 }
