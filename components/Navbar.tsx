@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useTheme } from "./ThemeProvider";
 
 const navLinks = [
-  { href: "/overview", label: "Overview" },
   { href: "/system-logic", label: "System Logic" },
   { href: "/technical-architecture", label: "Technical Architecture" },
   { href: "/about_us", label: "About Us" },
@@ -139,7 +138,7 @@ export default function Navbar() {
             left: 0,
             width: "100vw",
             height: "100vh",
-            background: "rgba(0,0,0,0.3)",
+            background: "rgba(0,0,0,0.4)",
             zIndex: 1000,
           }}
           onClick={() => setOpen(false)}
@@ -147,17 +146,86 @@ export default function Navbar() {
           <div
             style={{
               background: "var(--background)",
-              width: "85vw",
-              maxWidth: 320,
+              width: "75vw",
+              maxWidth: 280,
               minHeight: "100vh",
-              boxShadow: "2px 0 16px rgba(0,0,0,0.1)",
+              boxShadow: "2px 0 16px rgba(0,0,0,0.12)",
               display: "flex",
               flexDirection: "column",
-              padding: "2rem 1.5rem",
+              padding: "1.5rem 1.25rem",
             }}
             onClick={(e) => e.stopPropagation()}
           >
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 24 }}>
+            {/* Drawer header: logo + close */}
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 20 }}>
+              <Link
+                href="/"
+                onClick={() => setOpen(false)}
+                style={{
+                  fontWeight: 800,
+                  fontSize: 20,
+                  color: "var(--foreground)",
+                  textDecoration: "none",
+                }}
+              >
+                DuneBroom
+              </Link>
+              <button
+                onClick={() => setOpen(false)}
+                style={{
+                  background: "none",
+                  border: "none",
+                  fontSize: 24,
+                  cursor: "pointer",
+                  color: "var(--foreground)",
+                }}
+                aria-label="Close menu"
+              >
+                ×
+              </button>
+            </div>
+
+            {/* Nav links */}
+            <ul
+              style={{
+                listStyle: "none",
+                display: "flex",
+                flexDirection: "column",
+                gap: 20,
+                padding: 0,
+                margin: 0,
+                flex: 1,
+              }}
+            >
+              {navLinks.map((link) => {
+                const isActive = pathname === link.href;
+                return (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      onClick={() => setOpen(false)}
+                      style={{
+                        color: isActive ? "var(--accent)" : "var(--foreground)",
+                        textDecoration: "none",
+                        fontWeight: isActive ? 600 : 500,
+                        fontSize: 18,
+                      }}
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+
+            {/* Divider + theme toggle at bottom */}
+            <div
+              style={{
+                borderTop: "1px solid var(--border)",
+                paddingTop: 16,
+                marginTop: 16,
+              }}
+            >
               <button
                 onClick={toggleTheme}
                 aria-label="Toggle theme"
@@ -177,50 +245,7 @@ export default function Navbar() {
               >
                 {theme === "light" ? "\u{1F319}" : "\u2600\uFE0F"}
               </button>
-              <button
-                onClick={() => setOpen(false)}
-                style={{
-                  background: "none",
-                  border: "none",
-                  fontSize: 28,
-                  cursor: "pointer",
-                  color: "var(--foreground)",
-                }}
-                aria-label="Close menu"
-              >
-                ×
-              </button>
             </div>
-            <ul
-              style={{
-                listStyle: "none",
-                display: "flex",
-                flexDirection: "column",
-                gap: 24,
-                padding: 0,
-                margin: 0,
-              }}
-            >
-              {navLinks.map((link) => {
-                const isActive = pathname === link.href;
-                return (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      onClick={() => setOpen(false)}
-                      style={{
-                        color: isActive ? "var(--accent)" : "var(--foreground)",
-                        textDecoration: "none",
-                        fontWeight: isActive ? 600 : 500,
-                        fontSize: 20,
-                      }}
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
           </div>
         </div>
       )}
