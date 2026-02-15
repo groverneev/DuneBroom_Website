@@ -3,11 +3,12 @@ export default function Footer() {
     <footer
       style={{
         padding: "24px 2rem",
-        background: "#fff",
-        borderTop: "1px solid #e5e7eb",
+        background: "var(--background)",
+        borderTop: "1px solid var(--border)",
         textAlign: "center",
-        color: "#6b7280",
+        color: "var(--muted)",
         fontSize: 14,
+        transition: "background-color 0.3s, border-color 0.3s, color 0.3s",
       }}
     >
       &copy; {new Date().getFullYear()} DuneBroom. All rights reserved.

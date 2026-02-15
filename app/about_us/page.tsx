@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function AboutPage() {
   return (
-    <main style={{ fontFamily: "Inter, sans-serif", background: "#fff", minHeight: "100vh" }}>
+    <main style={{ fontFamily: "Inter, sans-serif", background: "var(--background)", minHeight: "100vh", transition: "background-color 0.3s" }}>
       <section
         style={{
           maxWidth: 1000,
@@ -16,7 +16,7 @@ export default function AboutPage() {
             fontSize: 44,
             fontWeight: 800,
             letterSpacing: "-0.03em",
-            color: "#111827",
+            color: "var(--foreground)",
             textAlign: "center",
             marginBottom: "3rem",
           }}
@@ -34,11 +34,11 @@ export default function AboutPage() {
           {/* Neev Grover */}
           <div
             style={{
-              background: "#f9fafb",
+              background: "var(--surface)",
               borderRadius: 12,
               padding: "2.5rem",
               textAlign: "center",
-              border: "1px solid #e5e7eb",
+              border: "1px solid var(--border)",
             }}
           >
             <div style={{ marginBottom: "1.5rem" }}>
@@ -49,7 +49,7 @@ export default function AboutPage() {
                 height={130}
                 style={{
                   borderRadius: "50%",
-                  border: "4px solid #fff",
+                  border: "4px solid var(--card-bg)",
                   boxShadow: "0 2px 12px rgba(0,0,0,0.08)",
                   background: "#eee",
                   display: "block",
@@ -64,7 +64,7 @@ export default function AboutPage() {
                 letterSpacing: "-0.02em",
                 margin: 0,
                 marginBottom: "0.5rem",
-                color: "#111827",
+                color: "var(--foreground)",
               }}
             >
               Neev Grover
@@ -74,7 +74,7 @@ export default function AboutPage() {
                 fontSize: 16,
                 fontWeight: 400,
                 margin: "0 0 1.5rem 0",
-                color: "#6b7280",
+                color: "var(--muted)",
               }}
             >
               Sophomore at the Harker School
@@ -85,7 +85,7 @@ export default function AboutPage() {
                 maxWidth: "100%",
                 margin: "0 auto",
                 lineHeight: 1.6,
-                color: "#374151",
+                color: "var(--subtle)",
               }}
             >
               Neev is passionate about Computer Science, Chess, and the
@@ -97,11 +97,11 @@ export default function AboutPage() {
           {/* Shradha Rachamreddy */}
           <div
             style={{
-              background: "#f9fafb",
+              background: "var(--surface)",
               borderRadius: 12,
               padding: "2.5rem",
               textAlign: "center",
-              border: "1px solid #e5e7eb",
+              border: "1px solid var(--border)",
             }}
           >
             <div style={{ marginBottom: "1.5rem" }}>
@@ -112,7 +112,7 @@ export default function AboutPage() {
                 height={130}
                 style={{
                   borderRadius: "50%",
-                  border: "4px solid #fff",
+                  border: "4px solid var(--card-bg)",
                   boxShadow: "0 2px 12px rgba(0,0,0,0.08)",
                   background: "#eee",
                   display: "block",
@@ -127,7 +127,7 @@ export default function AboutPage() {
                 letterSpacing: "-0.02em",
                 margin: 0,
                 marginBottom: "0.5rem",
-                color: "#111827",
+                color: "var(--foreground)",
               }}
             >
               Shradha Rachamreddy
@@ -137,7 +137,7 @@ export default function AboutPage() {
                 fontSize: 16,
                 fontWeight: 400,
                 margin: "0 0 1.5rem 0",
-                color: "#6b7280",
+                color: "var(--muted)",
               }}
             >
               Sophomore at Stanford Online High School
@@ -148,7 +148,7 @@ export default function AboutPage() {
                 maxWidth: "100%",
                 margin: "0 auto",
                 lineHeight: 1.6,
-                color: "#374151",
+                color: "var(--subtle)",
               }}
             >
               Shradha enjoys tutoring, scrapbooking for her school&apos;s yearbook,

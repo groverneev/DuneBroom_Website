@@ -12,9 +12,10 @@ export default function Home() {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          background: "#f9fafb",
+          background: "var(--surface)",
           textAlign: "center",
           padding: "4rem 2rem",
+          transition: "background-color 0.3s",
         }}
       >
         <h1
@@ -23,7 +24,7 @@ export default function Home() {
             fontWeight: 800,
             letterSpacing: "-0.03em",
             margin: 0,
-            color: "#111827",
+            color: "var(--foreground)",
           }}
         >
           DuneBroom
@@ -33,7 +34,7 @@ export default function Home() {
             fontSize: 24,
             fontWeight: 400,
             margin: "1rem 0 2rem 0",
-            color: "#6b7280",
+            color: "var(--muted)",
           }}
         >
           Robotics, Innovation, and Clean Beaches
@@ -63,7 +64,7 @@ export default function Home() {
           style={{
             fontSize: 18,
             lineHeight: 1.7,
-            color: "#374151",
+            color: "var(--subtle)",
             maxWidth: 650,
             margin: "0 auto 2rem auto",
           }}
@@ -77,7 +78,7 @@ export default function Home() {
         <Link
           href="/overview"
           style={{
-            background: "#3b82f6",
+            background: "var(--accent)",
             color: "#fff",
             fontWeight: 600,
             fontSize: 18,

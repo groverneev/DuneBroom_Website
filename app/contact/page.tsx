@@ -33,7 +33,7 @@ export default function ContactPage() {
   }
 
   return (
-    <main style={{ fontFamily: "Inter, sans-serif", background: "#fff", minHeight: "100vh" }}>
+    <main style={{ fontFamily: "Inter, sans-serif", background: "var(--background)", minHeight: "100vh", transition: "background-color 0.3s" }}>
       <section
         style={{
           maxWidth: 600,
@@ -47,12 +47,12 @@ export default function ContactPage() {
             fontWeight: 800,
             letterSpacing: "-0.03em",
             marginBottom: "0.5rem",
-            color: "#111827",
+            color: "var(--foreground)",
           }}
         >
           Contact Us
         </h1>
-        <p style={{ fontSize: 18, color: "#6b7280", marginBottom: "2.5rem" }}>
+        <p style={{ fontSize: 18, color: "var(--muted)", marginBottom: "2.5rem" }}>
           Have a question or want to get in touch? Send us a message.
         </p>
 
@@ -65,7 +65,7 @@ export default function ContactPage() {
           }}
         >
           <div>
-            <label style={{ fontWeight: 500, fontSize: 15, color: "#374151", display: "block", marginBottom: 6 }}>
+            <label style={{ fontWeight: 500, fontSize: 15, color: "var(--subtle)", display: "block", marginBottom: 6 }}>
               Name
             </label>
             <input
@@ -78,7 +78,7 @@ export default function ContactPage() {
           </div>
 
           <div>
-            <label style={{ fontWeight: 500, fontSize: 15, color: "#374151", display: "block", marginBottom: 6 }}>
+            <label style={{ fontWeight: 500, fontSize: 15, color: "var(--subtle)", display: "block", marginBottom: 6 }}>
               Email
             </label>
             <input
@@ -91,7 +91,7 @@ export default function ContactPage() {
           </div>
 
           <div>
-            <label style={{ fontWeight: 500, fontSize: 15, color: "#374151", display: "block", marginBottom: 6 }}>
+            <label style={{ fontWeight: 500, fontSize: 15, color: "var(--subtle)", display: "block", marginBottom: 6 }}>
               Message
             </label>
             <textarea
@@ -107,7 +107,7 @@ export default function ContactPage() {
             type="submit"
             disabled={status === "sending"}
             style={{
-              background: "#3b82f6",
+              background: "var(--accent)",
               color: "#fff",
               border: "none",
               borderRadius: 8,
@@ -147,9 +147,9 @@ const inputStyle: React.CSSProperties = {
   width: "100%",
   padding: "12px 14px",
   borderRadius: 8,
-  border: "1px solid #e5e7eb",
-  background: "#f9fafb",
-  color: "#111827",
+  border: "1px solid var(--border)",
+  background: "var(--surface)",
+  color: "var(--foreground)",
   fontSize: 16,
   outline: "none",
   boxSizing: "border-box",

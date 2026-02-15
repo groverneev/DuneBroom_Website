@@ -8,6 +8,18 @@
   --border: #e5e7eb;
   --surface: #f9fafb;
   --accent: #3b82f6;
+  --card-bg: #ffffff;
+}
+
+html.dark {
+  --background: #0e1321;
+  --foreground: #f3f4f6;
+  --muted: #9ca3af;
+  --subtle: #d1d5db;
+  --border: #1f2937;
+  --surface: #1a1f2e;
+  --accent: #3b82f6;
+  --card-bg: #1e2533;
 }
 
 body {
@@ -16,4 +28,5 @@ body {
   font-family: "Inter", Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
+  transition: background-color 0.3s, color 0.3s;
 }

@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import ThemeProvider from "../components/ThemeProvider";
 import "./globals.css";
 
 export const metadata = {
@@ -22,9 +23,11 @@ export default function RootLayout({
           boxSizing: "border-box",
         }}
       >
-        <Navbar />
-        {children}
-        <Footer />
+        <ThemeProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
