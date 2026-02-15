@@ -12,7 +12,7 @@ const navLinks = [
 ];
 
 export default function Navbar() {
-  const [open, setOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
   const { theme, toggleTheme } = useTheme();
 
@@ -32,169 +32,43 @@ export default function Navbar() {
         style={{
           maxWidth: 1200,
           margin: "0 auto",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          padding: "1rem 2rem",
+          padding: "0 1rem",
         }}
       >
-        {/* Hamburger (mobile only) */}
-        <button
-          onClick={() => setOpen(!open)}
-          className="navbar-hamburger"
-          style={{
-            background: "none",
-            border: "none",
-            fontSize: 28,
-            cursor: "pointer",
-            display: "none",
-            color: "var(--foreground)",
-          }}
-          aria-label="Open menu"
-        >
-          ☰
-        </button>
-
-        {/* Logo */}
-        <Link
-          href="/"
-          className="navbar-logo"
-          style={{
-            fontWeight: 800,
-            fontSize: 24,
-            color: "var(--foreground)",
-            textDecoration: "none",
-          }}
-        >
-          DuneBroom
-        </Link>
-
-        {/* Desktop links + toggle */}
-        <div style={{ display: "flex", alignItems: "center", gap: 28 }}>
-          <ul
-            className="navbar-links"
-            style={{
-              listStyle: "none",
-              display: "flex",
-              gap: 28,
-              margin: 0,
-              padding: 0,
-              alignItems: "center",
-            }}
-          >
-            {navLinks.map((link) => {
-              const isActive = pathname === link.href;
-              return (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    style={{
-                      color: isActive ? "var(--accent)" : "var(--subtle)",
-                      textDecoration: "none",
-                      fontWeight: isActive ? 600 : 500,
-                      fontSize: 16,
-                      transition: "color 0.2s",
-                      borderBottom: isActive ? "2px solid var(--accent)" : "2px solid transparent",
-                      paddingBottom: 4,
-                    }}
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-
-          {/* Theme toggle */}
-          <button
-            onClick={toggleTheme}
-            aria-label="Toggle theme"
-            style={{
-              background: "none",
-              border: "1px solid var(--border)",
-              borderRadius: 8,
-              width: 38,
-              height: 38,
-              cursor: "pointer",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontSize: 20,
-              color: "var(--foreground)",
-              transition: "border-color 0.3s, color 0.3s",
-            }}
-          >
-            {theme === "light" ? "\u{1F319}" : "\u2600\uFE0F"}
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile overlay */}
-      {open && (
         <div
           style={{
-            position: "fixed",
-            top: 0,
-            left: 0,
-            width: "100vw",
-            height: "100vh",
-            background: "rgba(0,0,0,0.4)",
-            zIndex: 1000,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            height: 64,
           }}
-          onClick={() => setOpen(false)}
         >
-          <div
+          {/* Logo */}
+          <Link
+            href="/"
             style={{
-              background: "var(--background)",
-              width: "75vw",
-              maxWidth: 280,
-              minHeight: "100vh",
-              boxShadow: "2px 0 16px rgba(0,0,0,0.12)",
-              display: "flex",
-              flexDirection: "column",
-              padding: "1.5rem 1.25rem",
+              fontWeight: 800,
+              fontSize: 24,
+              color: "var(--foreground)",
+              textDecoration: "none",
             }}
-            onClick={(e) => e.stopPropagation()}
           >
-            {/* Drawer header: logo + close */}
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 20 }}>
-              <Link
-                href="/"
-                onClick={() => setOpen(false)}
-                style={{
-                  fontWeight: 800,
-                  fontSize: 20,
-                  color: "var(--foreground)",
-                  textDecoration: "none",
-                }}
-              >
-                DuneBroom
-              </Link>
-              <button
-                onClick={() => setOpen(false)}
-                style={{
-                  background: "none",
-                  border: "none",
-                  fontSize: 24,
-                  cursor: "pointer",
-                  color: "var(--foreground)",
-                }}
-                aria-label="Close menu"
-              >
-                ×
-              </button>
-            </div>
+            DuneBroom
+          </Link>
 
-            {/* Nav links */}
+          {/* Desktop links + theme toggle */}
+          <div
+            className="navbar-desktop"
+            style={{ display: "flex", alignItems: "center", gap: 28 }}
+          >
             <ul
               style={{
                 listStyle: "none",
                 display: "flex",
-                flexDirection: "column",
-                gap: 20,
-                padding: 0,
+                gap: 28,
                 margin: 0,
-                flex: 1,
+                padding: 0,
+                alignItems: "center",
               }}
             >
               {navLinks.map((link) => {
@@ -203,12 +77,16 @@ export default function Navbar() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      onClick={() => setOpen(false)}
                       style={{
-                        color: isActive ? "var(--accent)" : "var(--foreground)",
+                        color: isActive ? "var(--accent)" : "var(--subtle)",
                         textDecoration: "none",
                         fontWeight: isActive ? 600 : 500,
-                        fontSize: 18,
+                        fontSize: 16,
+                        transition: "color 0.2s",
+                        borderBottom: isActive
+                          ? "2px solid var(--accent)"
+                          : "2px solid transparent",
+                        paddingBottom: 4,
                       }}
                     >
                       {link.label}
@@ -218,54 +96,169 @@ export default function Navbar() {
               })}
             </ul>
 
-            {/* Divider + theme toggle at bottom */}
-            <div
+            {/* Theme toggle */}
+            <button
+              onClick={toggleTheme}
+              aria-label="Toggle theme"
               style={{
-                borderTop: "1px solid var(--border)",
-                paddingTop: 16,
-                marginTop: 16,
+                background: "none",
+                border: "1px solid var(--border)",
+                borderRadius: 8,
+                width: 38,
+                height: 38,
+                cursor: "pointer",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontSize: 20,
+                color: "var(--foreground)",
+                transition: "border-color 0.3s, color 0.3s",
               }}
             >
-              <button
-                onClick={toggleTheme}
-                aria-label="Toggle theme"
-                style={{
-                  background: "none",
-                  border: "1px solid var(--border)",
-                  borderRadius: 8,
-                  width: 38,
-                  height: 38,
-                  cursor: "pointer",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontSize: 20,
-                  color: "var(--foreground)",
-                }}
-              >
-                {theme === "light" ? "\u{1F319}" : "\u2600\uFE0F"}
-              </button>
-            </div>
+              {theme === "light" ? "\u{1F319}" : "\u2600\uFE0F"}
+            </button>
+          </div>
+
+          {/* Mobile: theme toggle + hamburger */}
+          <div
+            className="navbar-mobile-buttons"
+            style={{
+              display: "none",
+              alignItems: "center",
+              gap: 8,
+            }}
+          >
+            <button
+              onClick={toggleTheme}
+              aria-label="Toggle theme"
+              style={{
+                background: "none",
+                border: "1px solid var(--border)",
+                borderRadius: 8,
+                width: 38,
+                height: 38,
+                cursor: "pointer",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontSize: 20,
+                color: "var(--foreground)",
+                transition: "border-color 0.3s, color 0.3s",
+              }}
+            >
+              {theme === "light" ? "\u{1F319}" : "\u2600\uFE0F"}
+            </button>
+
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle menu"
+              style={{
+                padding: 8,
+                borderRadius: 6,
+                background: "none",
+                border: "none",
+                color: "var(--foreground)",
+                cursor: "pointer",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              {mobileMenuOpen ? (
+                <svg
+                  width="24"
+                  height="24"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  width="24"
+                  height="24"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              )}
+            </button>
           </div>
         </div>
-      )}
+
+        {/* Mobile dropdown menu */}
+        {mobileMenuOpen && (
+          <div
+            className="navbar-mobile-menu"
+            style={{
+              borderTop: "1px solid var(--border)",
+              paddingTop: 16,
+              paddingBottom: 16,
+              display: "none",
+            }}
+          >
+            <nav
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                gap: 4,
+              }}
+            >
+              {navLinks.map((link) => {
+                const isActive = pathname === link.href;
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    style={{
+                      color: isActive ? "var(--accent)" : "var(--foreground)",
+                      textDecoration: "none",
+                      fontWeight: isActive ? 600 : 500,
+                      fontSize: 16,
+                      padding: "8px 8px",
+                      borderRadius: 6,
+                      transition: "background-color 0.2s, color 0.2s",
+                    }}
+                    onMouseEnter={(e) =>
+                      (e.currentTarget.style.backgroundColor = "var(--surface)")
+                    }
+                    onMouseLeave={(e) =>
+                      (e.currentTarget.style.backgroundColor = "transparent")
+                    }
+                  >
+                    {link.label}
+                  </Link>
+                );
+              })}
+            </nav>
+          </div>
+        )}
+      </div>
 
       <style>{`
-        @media (max-width: 900px) {
-          .navbar-links {
+        @media (max-width: 768px) {
+          .navbar-desktop {
             display: none !important;
           }
-          .navbar-hamburger {
-            display: block !important;
+          .navbar-mobile-buttons {
+            display: flex !important;
           }
-          .navbar-logo {
-            position: absolute;
-            left: 0;
-            right: 0;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: center;
-            width: fit-content;
+          .navbar-mobile-menu {
+            display: block !important;
           }
         }
       `}</style>
