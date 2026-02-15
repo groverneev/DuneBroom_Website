@@ -33,24 +33,20 @@ body {
 }
 
 /* Custom classes used by the contact page */
-.card {
-  background: white;
-  border-radius: 0.75rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
-}
-
 .form-input {
   width: 100%;
   padding: 0.625rem 0.75rem;
-  border: 1px solid #d1d5db;
+  border: 1px solid var(--border);
   border-radius: 0.5rem;
   font-size: 1rem;
   outline: none;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  background: var(--card-bg);
+  color: var(--foreground);
+  transition: border-color 0.2s, box-shadow 0.2s, background-color 0.3s, color 0.3s;
   box-sizing: border-box;
 }
 
 .form-input:focus {
-  border-color: #3b82f6;
+  border-color: var(--accent);
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
