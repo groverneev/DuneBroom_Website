@@ -3,97 +3,89 @@ import Image from "next/image";
 
 export default function AboutPage() {
   return (
-    <main style={{ background: "#f5f6fa", fontFamily: "Inter, sans-serif" }}>
-      {/* ───────── ABOUT US SECTION ───────── */}
+    <main style={{ fontFamily: "Inter, sans-serif", background: "#fff", minHeight: "100vh" }}>
       <section
         style={{
-          padding: "6rem 2rem",
-          background: "#0E1321",
-          minHeight: "85vh",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
+          maxWidth: 1000,
+          margin: "0 auto",
+          padding: "4rem 2rem 6rem 2rem",
         }}
       >
-        <h2
+        <h1
           style={{
-            fontSize: 48,
-            fontWeight: 700,
-            color: "#fff",
+            fontSize: 44,
+            fontWeight: 800,
+            letterSpacing: "-0.03em",
+            color: "#111827",
             textAlign: "center",
-            marginBottom: "4rem",
-            letterSpacing: "-0.02em",
+            marginBottom: "3rem",
           }}
         >
           About Us
-        </h2>
+        </h1>
 
         <div
           style={{
-            maxWidth: 1200,
-            margin: "0 auto",
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(400px, 1fr))",
-            gap: "4rem",
-            width: "100%",
+            gridTemplateColumns: "repeat(auto-fit, minmax(380px, 1fr))",
+            gap: "2rem",
           }}
         >
           {/* Neev Grover */}
           <div
             style={{
-              background: "#1e2533",
-              borderRadius: 16,
-              padding: "3rem",
+              background: "#f9fafb",
+              borderRadius: 12,
+              padding: "2.5rem",
               textAlign: "center",
-              color: "#fff",
+              border: "1px solid #e5e7eb",
             }}
           >
-            {/* Profile Image */}
-            <div style={{ flex: "none", marginBottom: "1.5rem" }}>
+            <div style={{ marginBottom: "1.5rem" }}>
               <Image
                 src="/neev_profile.png"
                 alt="Neev Grover, founder of DuneBroom"
-                width={140}
-                height={140}
+                width={130}
+                height={130}
                 style={{
                   borderRadius: "50%",
-                  border: "4px solid #1e2533",
-                  boxShadow: "0 4px 18px rgba(0,0,0,0.3)",
+                  border: "4px solid #fff",
+                  boxShadow: "0 2px 12px rgba(0,0,0,0.08)",
                   background: "#eee",
                   display: "block",
                   margin: "0 auto",
                 }}
               />
             </div>
-
-            <h1
+            <h2
               style={{
-                fontSize: 36,
-                fontWeight: 800,
-                letterSpacing: "-0.03em",
+                fontSize: 28,
+                fontWeight: 700,
+                letterSpacing: "-0.02em",
                 margin: 0,
                 marginBottom: "0.5rem",
+                color: "#111827",
               }}
             >
               Neev Grover
-            </h1>
-            <h2
-              style={{
-                fontSize: 20,
-                fontWeight: 400,
-                margin: "0 0 1.5rem 0",
-                color: "#9ca3af",
-              }}
-            >
-              Sophomore at the Harker School
             </h2>
             <p
               style={{
-                fontSize: 18,
+                fontSize: 16,
+                fontWeight: 400,
+                margin: "0 0 1.5rem 0",
+                color: "#6b7280",
+              }}
+            >
+              Sophomore at the Harker School
+            </p>
+            <p
+              style={{
+                fontSize: 16,
                 maxWidth: "100%",
-                margin: "0 auto 2rem auto",
+                margin: "0 auto",
                 lineHeight: 1.6,
-                color: "#e5e7eb",
+                color: "#374151",
               }}
             >
               Neev is passionate about Computer Science, Chess, and the
@@ -105,62 +97,62 @@ export default function AboutPage() {
           {/* Shradha Rachamreddy */}
           <div
             style={{
-              background: "#1e2533",
-              borderRadius: 16,
-              padding: "3rem",
+              background: "#f9fafb",
+              borderRadius: 12,
+              padding: "2.5rem",
               textAlign: "center",
-              color: "#fff",
+              border: "1px solid #e5e7eb",
             }}
           >
-            {/* Profile Image */}
-            <div style={{ flex: "none", marginBottom: "1.5rem" }}>
+            <div style={{ marginBottom: "1.5rem" }}>
               <Image
                 src="/shradha_profile.png"
                 alt="Shradha Rachamreddy"
-                width={140}
-                height={140}
+                width={130}
+                height={130}
                 style={{
                   borderRadius: "50%",
-                  border: "4px solid #1e2533",
-                  boxShadow: "0 4px 18px rgba(0,0,0,0.3)",
+                  border: "4px solid #fff",
+                  boxShadow: "0 2px 12px rgba(0,0,0,0.08)",
                   background: "#eee",
                   display: "block",
                   margin: "0 auto",
                 }}
               />
             </div>
-            <h1
+            <h2
               style={{
-                fontSize: 36,
-                fontWeight: 800,
-                letterSpacing: "-0.03em",
+                fontSize: 28,
+                fontWeight: 700,
+                letterSpacing: "-0.02em",
                 margin: 0,
                 marginBottom: "0.5rem",
+                color: "#111827",
               }}
             >
               Shradha Rachamreddy
-            </h1>
-            <h2
-              style={{
-                fontSize: 20,
-                fontWeight: 400,
-                margin: "0 0 1.5rem 0",
-                color: "#9ca3af",
-              }}
-            >
-              Sophomore at Stanford Online High School
             </h2>
             <p
               style={{
-                fontSize: 18,
-                maxWidth: "100%",
-                margin: "0 auto 2rem auto",
-                lineHeight: 1.6,
-                color: "#e5e7eb",
+                fontSize: 16,
+                fontWeight: 400,
+                margin: "0 0 1.5rem 0",
+                color: "#6b7280",
               }}
             >
-              Shradha enjoys tutoring, scrapbooking for her school's yearbook,
-              baking, and reading thriller novels. She's passionate about the AI
+              Sophomore at Stanford Online High School
+            </p>
+            <p
+              style={{
+                fontSize: 16,
+                maxWidth: "100%",
+                margin: "0 auto",
+                lineHeight: 1.6,
+                color: "#374151",
+              }}
+            >
+              Shradha enjoys tutoring, scrapbooking for her school&apos;s yearbook,
+              baking, and reading thriller novels. She&apos;s passionate about the AI
               field and its ability to impact the community.
             </p>
           </div>

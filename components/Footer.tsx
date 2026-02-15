@@ -2,15 +2,15 @@ export default function Footer() {
   return (
     <footer
       style={{
-        marginTop: 48,
-        padding: 24,
-        background: "#0e1321",
+        padding: "24px 2rem",
+        background: "#fff",
+        borderTop: "1px solid #e5e7eb",
         textAlign: "center",
-        color: "#828893",
+        color: "#6b7280",
         fontSize: 14,
       }}
     >
-      &copy; {new Date().getFullYear()} DuneBroom. All rights reserved.{" "}
+      &copy; {new Date().getFullYear()} DuneBroom. All rights reserved.
     </footer>
   );
 }

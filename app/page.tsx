@@ -1,27 +1,20 @@
-import ContactSection from "@/components/ContactSection";
-import AboutUsSection from "@/components/AboutUsSection";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main
-      style={{
-        background: "#f5f6fa",
-        fontFamily: "Inter, sans-serif",
-      }}
-    >
+    <main style={{ fontFamily: "Inter, sans-serif" }}>
       {/* HERO SECTION */}
       <section
-        id="hero"
         style={{
           minHeight: "85vh",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          background: "#0e1321",
-          color: "#fff",
+          background: "#f9fafb",
           textAlign: "center",
-          padding: "0 2rem",
+          padding: "4rem 2rem",
         }}
       >
         <h1
@@ -30,41 +23,73 @@ export default function Home() {
             fontWeight: 800,
             letterSpacing: "-0.03em",
             margin: 0,
+            color: "#111827",
           }}
         >
           DuneBroom
         </h1>
-        <h2 style={{ fontSize: 28, fontWeight: 400, margin: "1.2rem 0" }}>
+        <h2
+          style={{
+            fontSize: 24,
+            fontWeight: 400,
+            margin: "1rem 0 2rem 0",
+            color: "#6b7280",
+          }}
+        >
           Robotics, Innovation, and Clean Beaches
         </h2>
-        <p
-          style={{ fontSize: 22, maxWidth: 600, margin: "0 auto 0.5rem auto" }}
-        >
-          {" "}
-          {/*adds whitespace */}
-        </p>
-        <a
-          href="/about_dunebroom"
+
+        <div
           style={{
-            background: "#fff",
-            color: "#0e1321",
-            fontWeight: 700,
-            fontSize: 20,
+            maxWidth: 700,
+            width: "100%",
+            borderRadius: 16,
+            overflow: "hidden",
+            boxShadow: "0 4px 24px rgba(0,0,0,0.08)",
+            marginBottom: "2.5rem",
+          }}
+        >
+          <Image
+            src="/DuneBroom_Robot.jpg"
+            alt="DuneBroom autonomous beach-cleaning robot"
+            width={700}
+            height={525}
+            style={{ width: "100%", height: "auto", display: "block" }}
+            priority
+          />
+        </div>
+
+        <p
+          style={{
+            fontSize: 18,
+            lineHeight: 1.7,
+            color: "#374151",
+            maxWidth: 650,
+            margin: "0 auto 2rem auto",
+          }}
+        >
+          DuneBroom is a low-cost autonomous beach-cleaning robot that combines
+          machine-learning-based vision and mechanical sieving to efficiently
+          identify and collect debris from soft-sand environments — helping keep
+          our beaches and oceans clean.
+        </p>
+
+        <Link
+          href="/overview"
+          style={{
+            background: "#3b82f6",
+            color: "#fff",
+            fontWeight: 600,
+            fontSize: 18,
             borderRadius: 8,
             padding: "12px 32px",
             textDecoration: "none",
-            boxShadow: "0 4px 16px rgba(0,0,0,0.06)",
+            transition: "background 0.2s",
           }}
         >
-          About DuneBroom
-        </a>
+          Learn More
+        </Link>
       </section>
-
-      {/* ───────── ABOUT ME SECTION ───────── */}
-      <AboutUsSection />
-
-      {/* CONTACT SECTION */}
-      <ContactSection />
     </main>
   );
 }
