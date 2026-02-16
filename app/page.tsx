@@ -17,6 +17,12 @@ const detailPages = [
     description: "Hardware design, sensors, and the software stack powering the robot.",
   },
   {
+    href: "/outreach",
+    label: "Outreach & Impact",
+    icon: "🌱",
+    description: "Educational initiatives inspiring the next generation of clean energy leaders.",
+  },
+  {
     href: "/about_us",
     label: "About Us",
     icon: "👥",

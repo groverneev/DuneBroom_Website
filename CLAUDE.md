@@ -25,6 +25,7 @@ app/
 ├── page.tsx                # Homepage (hero + overview + nav cards)
 ├── system-logic/page.tsx   # System Logic detail page
 ├── technical-architecture/page.tsx  # Technical Architecture detail page
+├── outreach/page.tsx       # Outreach & Impact (education, book, art competition)
 ├── about_us/page.tsx       # About Us detail page
 ├── contact/page.tsx        # Contact form (Formspree) + social links
 components/
@@ -46,6 +47,7 @@ components/
 | `/` | Homepage (hero, overview, explore cards) |
 | `/system-logic` | System Logic |
 | `/technical-architecture` | Technical Architecture |
+| `/outreach` | Outreach & Impact (education initiatives, Adventures of Sunbeam, Earth Day Art Competition) |
 | `/about_us` | About Us |
 | `/contact` | Contact form + info |
 
