@@ -6,6 +6,7 @@ export default function Footer() {
   const quickLinks = [
     { href: "/system-logic", label: "System Logic" },
     { href: "/technical-architecture", label: "Technical Architecture" },
+    { href: "/outreach", label: "Outreach" },
     { href: "/about_us", label: "About Us" },
     { href: "/contact", label: "Contact" },
   ];
@@ -127,29 +128,28 @@ export default function Footer() {
             >
               Quick Links
             </h4>
-            <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+            <div style={{ display: "grid", gridTemplateColumns: "auto auto", justifyContent: "start", gap: "8px 32px" }}>
               {quickLinks.map((link) => (
-                <li key={link.href} style={{ marginBottom: 8 }}>
-                  <Link
-                    href={link.href}
-                    style={{
-                      color: "var(--subtle)",
-                      textDecoration: "none",
-                      fontSize: 14,
-                      transition: "color 0.2s",
-                    }}
-                    onMouseEnter={(e) =>
-                      (e.currentTarget.style.color = "var(--foreground)")
-                    }
-                    onMouseLeave={(e) =>
-                      (e.currentTarget.style.color = "var(--subtle)")
-                    }
-                  >
-                    {link.label}
-                  </Link>
-                </li>
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  style={{
+                    color: "var(--subtle)",
+                    textDecoration: "none",
+                    fontSize: 14,
+                    transition: "color 0.2s",
+                  }}
+                  onMouseEnter={(e) =>
+                    (e.currentTarget.style.color = "var(--foreground)")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.currentTarget.style.color = "var(--subtle)")
+                  }
+                >
+                  {link.label}
+                </Link>
               ))}
-            </ul>
+            </div>
           </div>
 
           {/* Social Links */}
