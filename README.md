@@ -23,15 +23,6 @@ DuneBroom is a youth-driven robotics project dedicated to combating beach pollut
 - **Tailwind CSS v4** + inline styles with CSS variables
 - **Formspree** for contact form submissions
 
-## Getting Started
-
-```bash
-npm install
-npm run dev      # Start dev server at http://localhost:3000
-npm run build    # Production build
-npm run lint     # Run ESLint
-```
-
 ## Website Structure
 
 ```
