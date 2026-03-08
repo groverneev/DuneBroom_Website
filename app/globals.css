@@ -2,25 +2,25 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #111827;
-  --muted: #6b7280;
-  --subtle: #374151;
-  --border: #e5e7eb;
-  --surface: #f9fafb;
-  --accent: #3b82f6;
-  --card-bg: #ffffff;
+  --background: #f8f7f4;
+  --foreground: #1a1a1a;
+  --muted: #737373;
+  --subtle: #404040;
+  --border: #e4e2dc;
+  --surface: #f0ede8;
+  --accent: #0f766e;
+  --card-bg: #faf9f7;
 }
 
 html.dark {
-  --background: #0e1321;
-  --foreground: #f3f4f6;
-  --muted: #9ca3af;
-  --subtle: #d1d5db;
-  --border: #1f2937;
-  --surface: #1a1f2e;
-  --accent: #3b82f6;
-  --card-bg: #1e2533;
+  --background: #111110;
+  --foreground: #f0eeea;
+  --muted: #737373;
+  --subtle: #a8a29e;
+  --border: #252422;
+  --surface: #1c1b19;
+  --accent: #14b8a6;
+  --card-bg: #222220;
 }
 
 body {
@@ -37,7 +37,7 @@ body {
   width: 100%;
   padding: 0.625rem 0.75rem;
   border: 1px solid var(--border);
-  border-radius: 0.5rem;
+  border-radius: 4px;
   font-size: 1rem;
   outline: none;
   background: var(--card-bg);
@@ -53,7 +53,7 @@ body {
 
 .form-input:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.12);
 }
 
 /* Footer responsive grid */

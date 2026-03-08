@@ -12,6 +12,62 @@ const navLinks = [
   { href: "/contact", label: "Contact" },
 ];
 
+function MoonIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+    </svg>
+  );
+}
+
+function SunIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="12" r="5" />
+      <line x1="12" y1="1" x2="12" y2="3" />
+      <line x1="12" y1="21" x2="12" y2="23" />
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+      <line x1="1" y1="12" x2="3" y2="12" />
+      <line x1="21" y1="12" x2="23" y2="12" />
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+    </svg>
+  );
+}
+
+function ThemeButton({ theme, toggleTheme }: { theme: string; toggleTheme: () => void }) {
+  return (
+    <button
+      onClick={toggleTheme}
+      aria-label="Toggle theme"
+      style={{
+        background: "none",
+        border: "none",
+        borderRadius: 6,
+        width: 34,
+        height: 34,
+        cursor: "pointer",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        color: "var(--muted)",
+        transition: "background-color 0.2s, color 0.2s",
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.backgroundColor = "var(--surface)";
+        e.currentTarget.style.color = "var(--foreground)";
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.backgroundColor = "transparent";
+        e.currentTarget.style.color = "var(--muted)";
+      }}
+    >
+      {theme === "light" ? <MoonIcon /> : <SunIcon />}
+    </button>
+  );
+}
+
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
@@ -48,8 +104,8 @@ export default function Navbar() {
           <Link
             href="/"
             style={{
-              fontWeight: 800,
-              fontSize: 24,
+              fontWeight: 700,
+              fontSize: 20,
               color: "var(--foreground)",
               textDecoration: "none",
             }}
@@ -60,7 +116,7 @@ export default function Navbar() {
           {/* Desktop links + theme toggle */}
           <div
             className="navbar-desktop"
-            style={{ display: "flex", alignItems: "center", gap: 28 }}
+            style={{ display: "flex", alignItems: "center", gap: 24 }}
           >
             <ul
               style={{
@@ -78,16 +134,14 @@ export default function Navbar() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
+                      className={isActive ? "nav-link active" : "nav-link"}
                       style={{
-                        color: isActive ? "var(--accent)" : "var(--subtle)",
+                        color: isActive ? "var(--foreground)" : "var(--muted)",
                         textDecoration: "none",
-                        fontWeight: isActive ? 600 : 500,
-                        fontSize: 16,
+                        fontWeight: isActive ? 500 : 400,
+                        fontSize: 15,
                         transition: "color 0.2s",
-                        borderBottom: isActive
-                          ? "2px solid var(--accent)"
-                          : "2px solid transparent",
-                        paddingBottom: 4,
+                        paddingBottom: 6,
                       }}
                     >
                       {link.label}
@@ -97,27 +151,7 @@ export default function Navbar() {
               })}
             </ul>
 
-            {/* Theme toggle */}
-            <button
-              onClick={toggleTheme}
-              aria-label="Toggle theme"
-              style={{
-                background: "none",
-                border: "1px solid var(--border)",
-                borderRadius: 8,
-                width: 38,
-                height: 38,
-                cursor: "pointer",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                fontSize: 20,
-                color: "var(--foreground)",
-                transition: "border-color 0.3s, color 0.3s",
-              }}
-            >
-              {theme === "light" ? "\u{1F319}" : "\u2600\uFE0F"}
-            </button>
+            <ThemeButton theme={theme} toggleTheme={toggleTheme} />
           </div>
 
           {/* Mobile: theme toggle + hamburger */}
@@ -129,26 +163,7 @@ export default function Navbar() {
               gap: 8,
             }}
           >
-            <button
-              onClick={toggleTheme}
-              aria-label="Toggle theme"
-              style={{
-                background: "none",
-                border: "1px solid var(--border)",
-                borderRadius: 8,
-                width: 38,
-                height: 38,
-                cursor: "pointer",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                fontSize: 20,
-                color: "var(--foreground)",
-                transition: "border-color 0.3s, color 0.3s",
-              }}
-            >
-              {theme === "light" ? "\u{1F319}" : "\u2600\uFE0F"}
-            </button>
+            <ThemeButton theme={theme} toggleTheme={toggleTheme} />
 
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -166,34 +181,12 @@ export default function Navbar() {
               }}
             >
               {mobileMenuOpen ? (
-                <svg
-                  width="24"
-                  height="24"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               ) : (
-                <svg
-                  width="24"
-                  height="24"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
               )}
             </button>
@@ -211,13 +204,7 @@ export default function Navbar() {
               display: "none",
             }}
           >
-            <nav
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                gap: 4,
-              }}
-            >
+            <nav style={{ display: "flex", flexDirection: "column", gap: 4 }}>
               {navLinks.map((link) => {
                 const isActive = pathname === link.href;
                 return (
@@ -226,10 +213,10 @@ export default function Navbar() {
                     href={link.href}
                     onClick={() => setMobileMenuOpen(false)}
                     style={{
-                      color: isActive ? "var(--accent)" : "var(--foreground)",
+                      color: isActive ? "var(--foreground)" : "var(--muted)",
                       textDecoration: "none",
-                      fontWeight: isActive ? 600 : 500,
-                      fontSize: 16,
+                      fontWeight: isActive ? 500 : 400,
+                      fontSize: 15,
                       padding: "8px 8px",
                       borderRadius: 6,
                       transition: "background-color 0.2s, color 0.2s",
@@ -252,16 +239,23 @@ export default function Navbar() {
 
       <style>{`
         @media (max-width: 768px) {
-          .navbar-desktop {
-            display: none !important;
-          }
-          .navbar-mobile-buttons {
-            display: flex !important;
-          }
-          .navbar-mobile-menu {
-            display: block !important;
-          }
+          .navbar-desktop { display: none !important; }
+          .navbar-mobile-buttons { display: flex !important; }
+          .navbar-mobile-menu { display: block !important; }
         }
+        .nav-link { position: relative; display: inline-block; }
+        .nav-link::after {
+          content: '';
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+          width: 0;
+          height: 2px;
+          background: var(--accent);
+          transition: width 0.25s ease;
+        }
+        .nav-link:hover::after,
+        .nav-link.active::after { width: 100%; }
       `}</style>
     </nav>
   );
