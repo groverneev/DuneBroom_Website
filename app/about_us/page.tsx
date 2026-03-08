@@ -6,7 +6,7 @@ export default function AboutPage() {
     <main style={{ fontFamily: "Inter, sans-serif", background: "var(--background)", minHeight: "100vh", transition: "background-color 0.3s" }}>
       <section
         style={{
-          maxWidth: 1000,
+          maxWidth: 860,
           margin: "0 auto",
           padding: "4rem 2rem 6rem 2rem",
         }}
@@ -17,144 +17,142 @@ export default function AboutPage() {
             fontWeight: 800,
             letterSpacing: "-0.03em",
             color: "var(--foreground)",
-            textAlign: "center",
-            marginBottom: "3rem",
+            marginBottom: "1rem",
+            marginTop: 0,
           }}
         >
           About Us
         </h1>
-
-        <div
+        <p
           style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(380px, 1fr))",
-            gap: "2rem",
+            fontSize: 17,
+            color: "var(--muted)",
+            maxWidth: 600,
+            marginBottom: "3.5rem",
+            marginTop: 0,
+            lineHeight: 1.75,
           }}
         >
+          DuneBroom is a student-led robotics project combining machine learning and mechanical
+          engineering to clean beach environments autonomously.
+        </p>
+
+        <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
           {/* Neev Grover */}
           <div
             style={{
-              background: "var(--surface)",
-              borderRadius: 12,
-              padding: "2.5rem",
-              textAlign: "center",
-              border: "1px solid var(--border)",
+              display: "flex",
+              gap: "2rem",
+              alignItems: "flex-start",
+              borderBottom: "1px solid var(--border)",
+              paddingBottom: "2.5rem",
+              marginBottom: "2.5rem",
             }}
           >
-            <div style={{ marginBottom: "1.5rem" }}>
-              <Image
-                src="/neev_profile.png"
-                alt="Neev Grover, founder of DuneBroom"
-                width={130}
-                height={130}
+            <Image
+              src="/neev_profile.png"
+              alt="Neev Grover, founder of DuneBroom"
+              width={96}
+              height={96}
+              style={{
+                borderRadius: "50%",
+                flexShrink: 0,
+                display: "block",
+                background: "var(--surface)",
+              }}
+            />
+            <div style={{ textAlign: "left" }}>
+              <h2
                 style={{
-                  borderRadius: "50%",
-                  border: "4px solid var(--card-bg)",
-                  boxShadow: "0 2px 12px rgba(0,0,0,0.08)",
-                  background: "#eee",
-                  display: "block",
-                  margin: "0 auto",
+                  fontSize: 22,
+                  fontWeight: 700,
+                  letterSpacing: "-0.02em",
+                  margin: "0 0 0.25rem 0",
+                  color: "var(--foreground)",
                 }}
-              />
+              >
+                Neev Grover
+              </h2>
+              <p
+                style={{
+                  fontSize: 14,
+                  fontWeight: 400,
+                  margin: "0 0 1rem 0",
+                  color: "var(--muted)",
+                }}
+              >
+                Sophomore at the Harker School
+              </p>
+              <p
+                style={{
+                  fontSize: 15,
+                  margin: 0,
+                  lineHeight: 1.7,
+                  color: "var(--subtle)",
+                }}
+              >
+                Neev is passionate about Computer Science, Chess, and the
+                Environment. He enjoys building projects, playing competitive
+                chess, and writing about technology on his blog.
+              </p>
             </div>
-            <h2
-              style={{
-                fontSize: 28,
-                fontWeight: 700,
-                letterSpacing: "-0.02em",
-                margin: 0,
-                marginBottom: "0.5rem",
-                color: "var(--foreground)",
-              }}
-            >
-              Neev Grover
-            </h2>
-            <p
-              style={{
-                fontSize: 16,
-                fontWeight: 400,
-                margin: "0 0 1.5rem 0",
-                color: "var(--muted)",
-              }}
-            >
-              Sophomore at the Harker School
-            </p>
-            <p
-              style={{
-                fontSize: 16,
-                maxWidth: "100%",
-                margin: "0 auto",
-                lineHeight: 1.6,
-                color: "var(--subtle)",
-              }}
-            >
-              Neev is passionate about Computer Science, Chess, and the
-              Environment. He enjoys building projects, playing competitive
-              chess, and writing about technology on his blog.
-            </p>
           </div>
 
           {/* Shradha Rachamreddy */}
           <div
             style={{
-              background: "var(--surface)",
-              borderRadius: 12,
-              padding: "2.5rem",
-              textAlign: "center",
-              border: "1px solid var(--border)",
+              display: "flex",
+              gap: "2rem",
+              alignItems: "flex-start",
             }}
           >
-            <div style={{ marginBottom: "1.5rem" }}>
-              <Image
-                src="/shradha_profile.png"
-                alt="Shradha Rachamreddy"
-                width={130}
-                height={130}
+            <Image
+              src="/shradha_profile.png"
+              alt="Shradha Rachamreddy"
+              width={96}
+              height={96}
+              style={{
+                borderRadius: "50%",
+                flexShrink: 0,
+                display: "block",
+                background: "var(--surface)",
+              }}
+            />
+            <div style={{ textAlign: "left" }}>
+              <h2
                 style={{
-                  borderRadius: "50%",
-                  border: "4px solid var(--card-bg)",
-                  boxShadow: "0 2px 12px rgba(0,0,0,0.08)",
-                  background: "#eee",
-                  display: "block",
-                  margin: "0 auto",
+                  fontSize: 22,
+                  fontWeight: 700,
+                  letterSpacing: "-0.02em",
+                  margin: "0 0 0.25rem 0",
+                  color: "var(--foreground)",
                 }}
-              />
+              >
+                Shradha Rachamreddy
+              </h2>
+              <p
+                style={{
+                  fontSize: 14,
+                  fontWeight: 400,
+                  margin: "0 0 1rem 0",
+                  color: "var(--muted)",
+                }}
+              >
+                Sophomore at Stanford Online High School
+              </p>
+              <p
+                style={{
+                  fontSize: 15,
+                  margin: 0,
+                  lineHeight: 1.7,
+                  color: "var(--subtle)",
+                }}
+              >
+                Shradha enjoys tutoring, scrapbooking for her school&apos;s yearbook,
+                baking, and reading thriller novels. She&apos;s passionate about the AI
+                field and its ability to impact the community.
+              </p>
             </div>
-            <h2
-              style={{
-                fontSize: 28,
-                fontWeight: 700,
-                letterSpacing: "-0.02em",
-                margin: 0,
-                marginBottom: "0.5rem",
-                color: "var(--foreground)",
-              }}
-            >
-              Shradha Rachamreddy
-            </h2>
-            <p
-              style={{
-                fontSize: 16,
-                fontWeight: 400,
-                margin: "0 0 1.5rem 0",
-                color: "var(--muted)",
-              }}
-            >
-              Sophomore at Stanford Online High School
-            </p>
-            <p
-              style={{
-                fontSize: 16,
-                maxWidth: "100%",
-                margin: "0 auto",
-                lineHeight: 1.6,
-                color: "var(--subtle)",
-              }}
-            >
-              Shradha enjoys tutoring, scrapbooking for her school&apos;s yearbook,
-              baking, and reading thriller novels. She&apos;s passionate about the AI
-              field and its ability to impact the community.
-            </p>
           </div>
         </div>
       </section>

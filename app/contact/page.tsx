@@ -120,7 +120,7 @@ export default function ContactPage() {
             style={{
               background: "var(--surface)",
               border: "1px solid var(--border)",
-              borderRadius: 12,
+              borderRadius: 4,
               padding: "2rem",
               transition: "background-color 0.3s, border-color 0.3s",
             }}
@@ -134,7 +134,7 @@ export default function ContactPage() {
                 style={{
                   background: "var(--card-bg)",
                   border: "1px solid var(--border)",
-                  borderRadius: 8,
+                  borderRadius: 4,
                   padding: "1.5rem 1rem",
                   textAlign: "center",
                 }}
@@ -222,7 +222,7 @@ export default function ContactPage() {
                 </div>
 
                 {status === "error" && (
-                  <div style={{ background: "#fef2f2", border: "1px solid #fecaca", color: "#dc2626", padding: "12px 16px", borderRadius: 8, fontSize: 14 }}>
+                  <div style={{ background: "#fef2f2", border: "1px solid #fecaca", color: "#dc2626", padding: "12px 16px", borderRadius: 4, fontSize: 14 }}>
                     Something went wrong. Please try again or email directly.
                   </div>
                 )}
@@ -237,7 +237,7 @@ export default function ContactPage() {
                     fontWeight: 600,
                     fontSize: 16,
                     padding: "12px 16px",
-                    borderRadius: 8,
+                    borderRadius: 4,
                     border: "none",
                     cursor: status === "loading" ? "not-allowed" : "pointer",
                     opacity: status === "loading" ? 0.7 : 1,
@@ -265,7 +265,7 @@ export default function ContactPage() {
               style={{
                 background: "var(--surface)",
                 border: "1px solid var(--border)",
-                borderRadius: 12,
+                borderRadius: 4,
                 padding: "2rem",
                 transition: "background-color 0.3s, border-color 0.3s",
               }}
@@ -300,7 +300,7 @@ export default function ContactPage() {
               style={{
                 background: "var(--surface)",
                 border: "1px solid var(--border)",
-                borderRadius: 12,
+                borderRadius: 4,
                 padding: "2rem",
                 transition: "background-color 0.3s, border-color 0.3s",
               }}
@@ -319,7 +319,7 @@ export default function ContactPage() {
                     style={{
                       width: 48,
                       height: 48,
-                      borderRadius: 10,
+                      borderRadius: 6,
                       border: "1px solid var(--border)",
                       background: "var(--card-bg)",
                       display: "flex",
