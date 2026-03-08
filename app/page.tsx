@@ -1,34 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
-
-const detailPages = [
-  {
-    href: "/system-logic",
-    label: "System Logic",
-    icon: "⚙️",
-    description: "How DuneBroom detects, navigates, and collects debris autonomously.",
-  },
-  {
-    href: "/technical-architecture",
-    label: "Technical Architecture",
-    icon: "🏗️",
-    description: "Hardware design, sensors, and the software stack powering the robot.",
-  },
-  {
-    href: "/outreach",
-    label: "Outreach & Impact",
-    icon: "🌱",
-    description: "Educational initiatives inspiring the next generation of clean energy leaders.",
-  },
-  {
-    href: "/about_us",
-    label: "About Us",
-    icon: "👥",
-    description: "Meet the team behind DuneBroom and our mission for cleaner beaches.",
-  },
-];
 
 export default function Home() {
   return (
@@ -100,7 +72,7 @@ export default function Home() {
         >
           DuneBroom is a low-cost autonomous beach-cleaning robot that combines
           machine-learning-based vision and mechanical sieving to efficiently
-          identify and collect debris from soft-sand environments — helping keep
+          identify and collect debris from soft-sand environments, helping keep
           our beaches and oceans clean.
         </p>
 
@@ -274,7 +246,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* NAVIGATION BUTTONS TO DETAIL PAGES */}
+      {/* AWARDS SECTION */}
       <section
         style={{
           maxWidth: 900,
@@ -290,51 +262,41 @@ export default function Home() {
             color: "var(--foreground)",
           }}
         >
-          Explore More
+          Awards
         </h2>
         <div
           style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-            gap: "1.5rem",
+            background: "var(--surface)",
+            borderRadius: 12,
+            padding: "2rem",
+            border: "1px solid var(--border)",
           }}
         >
-          {detailPages.map((page) => (
-            <Link
-              key={page.href}
-              href={page.href}
-              style={{
-                background: "var(--surface)",
-                border: "1px solid var(--border)",
-                borderRadius: 12,
-                padding: "1.5rem",
-                textDecoration: "none",
-                transition: "border-color 0.2s, box-shadow 0.2s",
-                display: "flex",
-                flexDirection: "column",
-                gap: 8,
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = "var(--accent)";
-                e.currentTarget.style.boxShadow = "0 4px 16px rgba(0,0,0,0.08)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = "var(--border)";
-                e.currentTarget.style.boxShadow = "none";
-              }}
-            >
-              <span style={{ fontSize: 28 }}>{page.icon}</span>
-              <span style={{ fontSize: 18, fontWeight: 600, color: "var(--foreground)" }}>
-                {page.label}
-              </span>
-              <span style={{ fontSize: 15, color: "var(--muted)", lineHeight: 1.6 }}>
-                {page.description}
-              </span>
-              <span style={{ fontSize: 14, fontWeight: 600, color: "var(--accent)", marginTop: 4 }}>
-                Learn more →
-              </span>
-            </Link>
-          ))}
+          <p
+            style={{
+              fontSize: 18,
+              lineHeight: 1.7,
+              color: "var(--subtle)",
+              margin: "0 0 1rem 0",
+            }}
+          >
+            DuneBroom was recognized as one of the{" "}
+            <strong style={{ color: "var(--foreground)" }}>Conrad Challenge Innovators</strong>,
+            highlighting the project&apos;s student-led approach to environmental problem solving.
+          </p>
+          <a
+            href="https://conrad.spacecenter.org/what-is-a-conrad-innovator/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "inline-block",
+              color: "var(--accent)",
+              fontWeight: 600,
+              textDecoration: "none",
+            }}
+          >
+            Learn about Conrad Innovators &rarr;
+          </a>
         </div>
       </section>
     </main>
