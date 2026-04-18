@@ -30,6 +30,78 @@ export default function OutreachPage() {
           the world understand the environment and the critical systems that sustain it.
         </p>
 
+        {/* Grassroots Education */}
+        <div style={{ paddingBottom: "3rem", marginBottom: "3rem", borderBottom: "1px solid var(--border)" }}>
+          <h2 style={{ fontSize: 28, fontWeight: 700, marginBottom: "0.5rem", marginTop: 0, color: "var(--foreground)" }}>
+            Grassroots Education
+          </h2>
+          <p style={{ fontSize: 17, color: "var(--muted)", marginBottom: "1.25rem", fontWeight: 500, marginTop: 0 }}>
+            Empowering Youth Across Borders
+          </p>
+          <p style={{ fontSize: 16, lineHeight: 1.75, color: "var(--subtle)", marginBottom: "2rem" }}>
+            Environmental protection is a global responsibility that requires global education. By
+            partnering with multiple schools across India, we hosted interactive environmental
+            awareness workshops to engage students directly. This education was translated into
+            active participation through large-scale environmental-theme drawing competitions,
+            giving hundreds of students a creative platform to express their vision for a cleaner,
+            greener Earth.
+          </p>
+
+          <div
+            style={{
+              width: "100%",
+              aspectRatio: "16/9",
+              background: "var(--surface)",
+              border: "2px dashed var(--border)",
+              borderRadius: 4,
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              marginBottom: "0.75rem",
+              color: "var(--muted)",
+            }}
+          >
+            <span style={{ fontSize: 14, fontWeight: 500 }}>[ Schools Outreach Photo ]</span>
+            <span style={{ fontSize: 12, marginTop: 4 }}>Add image → /public/outreach/schools-outreach.jpg</span>
+          </div>
+          <p style={{ fontSize: 13, color: "var(--muted)", marginBottom: "2.5rem", marginTop: 0 }}>
+            Partner schools across Northern and Southern India
+          </p>
+
+          <h3 style={{ fontSize: 20, fontWeight: 600, marginBottom: "0.75rem", marginTop: 0, color: "var(--foreground)" }}>
+            Sewa Samarpan Kalyansamiti Drawing Competitions
+          </h3>
+          <p style={{ fontSize: 16, lineHeight: 1.75, color: "var(--subtle)", marginBottom: "1.5rem" }}>
+            In partnership with Sewa Samarpan Kalyansamiti, we organized drawing competitions
+            that brought environmental themes to life through student art. The competitions sparked
+            conversations about pollution, conservation, and the role young people play in
+            protecting our planet.
+          </p>
+
+          <div
+            style={{
+              width: "100%",
+              aspectRatio: "16/9",
+              background: "var(--surface)",
+              border: "2px dashed var(--border)",
+              borderRadius: 4,
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              marginBottom: "0.75rem",
+              color: "var(--muted)",
+            }}
+          >
+            <span style={{ fontSize: 14, fontWeight: 500 }}>[ Drawing Competition Photo ]</span>
+            <span style={{ fontSize: 12, marginTop: 4 }}>Add image → /public/outreach/drawing-competition.jpg</span>
+          </div>
+          <p style={{ fontSize: 13, color: "var(--muted)", marginBottom: 0, marginTop: 0 }}>
+            Student artwork from the Sewa Samarpan Kalyansamiti drawing competitions
+          </p>
+        </div>
+
         {/* Adventures of Sunbeam */}
         <div style={{ paddingBottom: "3rem", marginBottom: "3rem", borderBottom: "1px solid var(--border)" }}>
           <h2 style={{ fontSize: 28, fontWeight: 700, marginBottom: "0.75rem", marginTop: 0, color: "var(--foreground)" }}>
