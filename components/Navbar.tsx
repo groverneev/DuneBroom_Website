@@ -5,9 +5,9 @@ import Link from "next/link";
 import { useTheme } from "./ThemeProvider";
 
 const navLinks = [
+  { href: "/outreach", label: "Outreach" },
   { href: "/system-logic", label: "System Logic" },
   { href: "/technical-architecture", label: "Technical Architecture" },
-  { href: "/outreach", label: "Outreach" },
   { href: "/about_us", label: "About Us" },
   { href: "/contact", label: "Contact" },
 ];

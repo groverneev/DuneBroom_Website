@@ -95,7 +95,7 @@ export default function Home() {
               e.currentTarget.style.borderColor = "var(--border)";
             }}
           >
-            Our Mission
+            Our Outreach
           </a>
         </div>
 
@@ -239,128 +239,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* OUTREACH SECTION */}
-      <section
-        style={{
-          maxWidth: 860,
-          margin: "0 auto",
-          padding: "4rem 2rem",
-          borderTop: "1px solid var(--border)",
-        }}
-      >
-        <p
-          style={{
-            fontSize: 12,
-            fontWeight: 600,
-            letterSpacing: "0.1em",
-            textTransform: "uppercase",
-            color: "var(--accent)",
-            margin: "0 0 8px 0",
-          }}
-        >
-          Outreach
-        </p>
-        <h2
-          style={{
-            fontSize: 34,
-            fontWeight: 700,
-            letterSpacing: "-0.02em",
-            marginBottom: "2rem",
-            marginTop: 0,
-            color: "var(--foreground)",
-          }}
-        >
-          Environment Awareness Program
-        </h2>
-
-        <div
-          style={{
-            background: "var(--surface)",
-            borderRadius: 4,
-            padding: "1.5rem 2rem",
-            marginBottom: "2.5rem",
-            display: "flex",
-            alignItems: "center",
-            gap: "1.5rem",
-            flexWrap: "wrap",
-          }}
-        >
-          <span
-            style={{
-              fontSize: 48,
-              fontWeight: 800,
-              color: "var(--accent)",
-              lineHeight: 1,
-              letterSpacing: "-0.03em",
-            }}
-          >
-            450
-          </span>
-          <p style={{ fontSize: 16, color: "var(--subtle)", margin: 0, lineHeight: 1.65 }}>
-            students engaged in environmental activities across{" "}
-            <strong style={{ color: "var(--foreground)" }}>5 schools</strong> in Northern and
-            Southern India.
-          </p>
-        </div>
-
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-            gap: "1.25rem",
-            marginBottom: "2.5rem",
-          }}
-        >
-          <div style={{ background: "var(--surface)", borderRadius: 4, padding: "1.25rem" }}>
-            <h4 style={{ fontSize: 15, fontWeight: 600, color: "var(--foreground)", marginBottom: "0.5rem", marginTop: 0 }}>
-              Grassroots Education
-            </h4>
-            <p style={{ fontSize: 14, color: "var(--muted)", margin: 0, lineHeight: 1.65 }}>
-              Interactive environmental awareness workshops and large-scale drawing competitions
-              hosted across partner schools.
-            </p>
-          </div>
-          <div style={{ background: "var(--surface)", borderRadius: 4, padding: "1.25rem" }}>
-            <h4 style={{ fontSize: 15, fontWeight: 600, color: "var(--foreground)", marginBottom: "0.5rem", marginTop: 0 }}>
-              Environmental Literacy
-            </h4>
-            <p style={{ fontSize: 14, color: "var(--muted)", margin: 0, lineHeight: 1.65 }}>
-              <em>Adventures of Sunbeam</em> turns complex environmental issues into inspiring
-              stories for young readers, complete with interactive activities.
-            </p>
-          </div>
-          <div style={{ background: "var(--surface)", borderRadius: 4, padding: "1.25rem" }}>
-            <h4 style={{ fontSize: 15, fontWeight: 600, color: "var(--foreground)", marginBottom: "0.5rem", marginTop: 0 }}>
-              Technology Solutions
-            </h4>
-            <p style={{ fontSize: 14, color: "var(--muted)", margin: 0, lineHeight: 1.65 }}>
-              The DuneBroom rover pairs education with real-world action — a low-cost autonomous
-              beach-cleaning robot tackling debris at the source.
-            </p>
-          </div>
-        </div>
-
-        <a
-          href="/outreach"
-          style={{
-            display: "inline-block",
-            background: "var(--accent)",
-            color: "#fff",
-            fontWeight: 600,
-            fontSize: 15,
-            borderRadius: 4,
-            padding: "11px 28px",
-            textDecoration: "none",
-            transition: "opacity 0.2s",
-          }}
-          onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.85")}
-          onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
-        >
-          Explore Our Outreach &rarr;
-        </a>
-      </section>
-
-      {/* AWARDS SECTION */}
+      {/* RECOGNITION SECTION */}
       <section
         style={{
           maxWidth: 860,

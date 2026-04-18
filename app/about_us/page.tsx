@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 
 export default function AboutPage() {
@@ -11,149 +10,165 @@ export default function AboutPage() {
           padding: "4rem 2rem 6rem 2rem",
         }}
       >
+        <p
+          style={{
+            fontSize: 12,
+            fontWeight: 600,
+            letterSpacing: "0.1em",
+            textTransform: "uppercase",
+            color: "var(--accent)",
+            margin: "0 0 8px 0",
+          }}
+        >
+          The Creator
+        </p>
         <h1
           style={{
             fontSize: 44,
             fontWeight: 800,
             letterSpacing: "-0.03em",
             color: "var(--foreground)",
-            marginBottom: "1rem",
+            marginBottom: "3rem",
             marginTop: 0,
           }}
         >
-          About Us
+          About
         </h1>
-        <p
+
+        {/* Profile */}
+        <div
           style={{
-            fontSize: 17,
-            color: "var(--muted)",
-            maxWidth: 600,
+            display: "flex",
+            gap: "3rem",
+            alignItems: "flex-start",
             marginBottom: "3.5rem",
-            marginTop: 0,
-            lineHeight: 1.75,
+            flexWrap: "wrap",
           }}
         >
-          DuneBroom is a student-led robotics project combining machine learning and mechanical
-          engineering to clean beach environments autonomously.
-        </p>
-
-        <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
-          {/* Neev Grover */}
-          <div
+          <Image
+            src="/neev_profile.png"
+            alt="Neev Grover, founder of DuneBroom"
+            width={160}
+            height={160}
             style={{
-              display: "flex",
-              gap: "2rem",
-              alignItems: "flex-start",
-              borderBottom: "1px solid var(--border)",
-              paddingBottom: "2.5rem",
-              marginBottom: "2.5rem",
+              borderRadius: "50%",
+              flexShrink: 0,
+              display: "block",
+              background: "var(--surface)",
+            }}
+          />
+          <div style={{ flex: 1, minWidth: 240 }}>
+            <h2
+              style={{
+                fontSize: 30,
+                fontWeight: 700,
+                letterSpacing: "-0.02em",
+                margin: "0 0 0.25rem 0",
+                color: "var(--foreground)",
+              }}
+            >
+              Neev Grover
+            </h2>
+            <p
+              style={{
+                fontSize: 15,
+                fontWeight: 400,
+                margin: "0 0 1.5rem 0",
+                color: "var(--accent)",
+              }}
+            >
+              Founder · Sophomore at the Harker School
+            </p>
+            <p
+              style={{
+                fontSize: 16,
+                margin: 0,
+                lineHeight: 1.8,
+                color: "var(--subtle)",
+              }}
+            >
+              Neev is a student inventor passionate about using technology to solve real-world
+              environmental problems. He built DuneBroom from the ground up — designing the
+              mechanical sieving system, training the ML vision model, and leading school
+              outreach programs across India. Outside of engineering, he enjoys competitive
+              chess, writing about technology, and building projects that make a tangible impact.
+            </p>
+          </div>
+        </div>
+
+        {/* Divider */}
+        <div style={{ borderTop: "1px solid var(--border)", marginBottom: "3.5rem" }} />
+
+        {/* The Mission */}
+        <div style={{ marginBottom: "3.5rem" }}>
+          <h2
+            style={{
+              fontSize: 26,
+              fontWeight: 700,
+              letterSpacing: "-0.02em",
+              marginBottom: "1rem",
+              marginTop: 0,
+              color: "var(--foreground)",
             }}
           >
-            <Image
-              src="/neev_profile.png"
-              alt="Neev Grover, founder of DuneBroom"
-              width={96}
-              height={96}
-              style={{
-                borderRadius: "50%",
-                flexShrink: 0,
-                display: "block",
-                background: "var(--surface)",
-              }}
-            />
-            <div style={{ textAlign: "left" }}>
-              <h2
-                style={{
-                  fontSize: 22,
-                  fontWeight: 700,
-                  letterSpacing: "-0.02em",
-                  margin: "0 0 0.25rem 0",
-                  color: "var(--foreground)",
-                }}
-              >
-                Neev Grover
-              </h2>
-              <p
-                style={{
-                  fontSize: 14,
-                  fontWeight: 400,
-                  margin: "0 0 1rem 0",
-                  color: "var(--muted)",
-                }}
-              >
-                Sophomore at the Harker School
-              </p>
-              <p
-                style={{
-                  fontSize: 15,
-                  margin: 0,
-                  lineHeight: 1.7,
-                  color: "var(--subtle)",
-                }}
-              >
-                Neev is passionate about Computer Science, Chess, and the
-                Environment. He enjoys building projects, playing competitive
-                chess, and writing about technology on his blog.
-              </p>
-            </div>
-          </div>
+            The Mission
+          </h2>
+          <p style={{ fontSize: 16, lineHeight: 1.8, color: "var(--subtle)", marginBottom: "1rem" }}>
+            DuneBroom started with a simple observation: beach cleanups rely entirely on human
+            volunteer hours, and yet less than 1% of coastal debris gets removed each year.
+            Neev set out to build a robot that could work autonomously — patrolling and
+            collecting without intervention — while staying affordable enough to be deployed
+            at scale.
+          </p>
+          <p style={{ fontSize: 16, lineHeight: 1.8, color: "var(--subtle)", margin: 0 }}>
+            The project grew into something larger: an education and awareness program reaching
+            450 students across 5 schools in India, a children&apos;s book, and a drawing
+            competition that gave young people a creative voice in the fight for a cleaner planet.
+          </p>
+        </div>
 
-          {/* Shradha Rachamreddy */}
-          <div
-            style={{
-              display: "flex",
-              gap: "2rem",
-              alignItems: "flex-start",
-            }}
-          >
-            <Image
-              src="/shradha_profile.png"
-              alt="Shradha Rachamreddy"
-              width={96}
-              height={96}
+        {/* Divider */}
+        <div style={{ borderTop: "1px solid var(--border)", marginBottom: "3.5rem" }} />
+
+        {/* Stats row */}
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))",
+            gap: "1.25rem",
+          }}
+        >
+          {[
+            { value: "450+", label: "Students reached" },
+            { value: "5", label: "Partner schools" },
+            { value: "1", label: "Book published" },
+            { value: "2+", label: "Years of research" },
+          ].map(({ value, label }) => (
+            <div
+              key={label}
               style={{
-                borderRadius: "50%",
-                flexShrink: 0,
-                display: "block",
                 background: "var(--surface)",
+                borderRadius: 4,
+                padding: "1.25rem",
+                textAlign: "center",
               }}
-            />
-            <div style={{ textAlign: "left" }}>
-              <h2
+            >
+              <span
                 style={{
-                  fontSize: 22,
-                  fontWeight: 700,
-                  letterSpacing: "-0.02em",
-                  margin: "0 0 0.25rem 0",
-                  color: "var(--foreground)",
+                  display: "block",
+                  fontSize: 34,
+                  fontWeight: 800,
+                  color: "var(--accent)",
+                  letterSpacing: "-0.03em",
+                  lineHeight: 1,
+                  marginBottom: "0.4rem",
                 }}
               >
-                Shradha Rachamreddy
-              </h2>
-              <p
-                style={{
-                  fontSize: 14,
-                  fontWeight: 400,
-                  margin: "0 0 1rem 0",
-                  color: "var(--muted)",
-                }}
-              >
-                Sophomore at Stanford Online High School
-              </p>
-              <p
-                style={{
-                  fontSize: 15,
-                  margin: 0,
-                  lineHeight: 1.7,
-                  color: "var(--subtle)",
-                }}
-              >
-                Shradha enjoys tutoring, scrapbooking for her school&apos;s yearbook,
-                baking, and reading thriller novels. She&apos;s passionate about the AI
-                field and its ability to impact the community.
-              </p>
+                {value}
+              </span>
+              <span style={{ fontSize: 13, color: "var(--muted)" }}>{label}</span>
             </div>
-          </div>
+          ))}
         </div>
       </section>
     </main>
