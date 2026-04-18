@@ -26,7 +26,7 @@ app/
 ├── outreach/page.tsx       # Outreach & Impact (grassroots education + environmental literacy)
 ├── system-logic/page.tsx   # System Logic detail page
 ├── technical-architecture/page.tsx  # Technical Architecture detail page
-├── about_us/page.tsx       # About Us detail page
+├── about_me/page.tsx       # About Me page
 ├── contact/page.tsx        # Contact form (Formspree) + social links
 components/
 ├── Navbar.tsx              # Sticky nav, mobile hamburger drawer
@@ -48,7 +48,7 @@ components/
 | `/outreach` | Outreach & Impact (grassroots education, environmental literacy, news coverage) |
 | `/system-logic` | System Logic |
 | `/technical-architecture` | Technical Architecture |
-| `/about_us` | About Us |
+| `/about_me` | About Me |
 | `/contact` | Contact form + info |
 
 ## Important Notes
