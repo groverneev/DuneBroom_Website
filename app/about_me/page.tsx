@@ -77,7 +77,7 @@ export default function AboutPage() {
                 color: "var(--accent)",
               }}
             >
-              Founder · Sophomore at the Harker School
+              Founder · Rising Junior at the Harker School
             </p>
             <p
               style={{
